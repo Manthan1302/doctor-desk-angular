@@ -6,10 +6,10 @@
                     <h3 class="card-title text-center mb-4">Doctor Registration Form</h3>
                     <form #doctorRegistrationForm="ngForm" (ngSubmit)="registerDoctor(doctorRegistrationForm.value)">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Doctor Name" ngModel name="doctorName">
+                            <input type="text" class="form-control" placeholder="Doctor Name" ngModel name="doctorName"/>
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Phone Number" ngModel name="doctorPhoneNumber">
+                            <input type="number" class="form-control" placeholder="Phone Number" ngModel name="doctorPhoneNumber"/>
                         </div>
                         <div class="form-group">
                             <select class="form-control" ngModel name="doctorGender">Gender
@@ -19,19 +19,19 @@
                             </select>
                         </div>
                         <div class="form-group" >
-                            <input type="email" class="form-control" placeholder="Email" ngModel name="doctorEmail">
+                            <input type="email" class="form-control" placeholder="Email" ngModel name="doctorEmail"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" ngModel name="doctorRegisterPassword">
+                            <input type="password" class="form-control" placeholder="Password" ngModel name="doctorRegisterPassword"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Confirm Password" ngModel name="doctorRegisterConfirmPassword">
+                            <input type="password" class="form-control" placeholder="Confirm Password" ngModel name="doctorRegisterConfirmPassword"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Clinic Name" ngModel name="doctorClinicName">
+                            <input type="text" class="form-control" placeholder="Clinic Name" ngModel name="doctorClinicName"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Clinic Address" ngModel name="doctorClinicAddress">
+                            <input type="text" class="form-control" placeholder="Clinic Address" ngModel name="doctorClinicAddress"/>
                         </div>
                         <div class="form-group">
                             <select class="form-control" ngModel name="doctorSpecialization">
@@ -43,7 +43,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Doctor Registration Number" ngModel name="doctorRegistrationNumber">
+                            <input type="number" class="form-control" placeholder="Doctor Registration Number" ngModel name="doctorRegistrationNumber"/>
                         </div>
                         <p><a routerLink="/doctorlogin">Login page</a></p>
                         <div class="form-group">
@@ -55,3 +55,4 @@
         </div>
     </div>
 </div>
+

@@ -11,6 +11,7 @@ import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/do
 import { PatientLoginComponent } from './patient/patient-login/patient-login.component';
 import { PatientDashboardComponent } from './patient/patient-dashboard/patient-dashboard.component';
 import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
+import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.component';
 
 const routes: Routes = [
   { path: "", component: AskingPageComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   {
     path: "doctordashbord", component: DashbordComponent,
     children: [
-      { path: "home", component: DoctorViewapointmentComponent }
+      { path: "home", component: DoctorViewapointmentComponent },
+      {path:"profile",component:DoctorProfileComponent}
 
 
     ]
