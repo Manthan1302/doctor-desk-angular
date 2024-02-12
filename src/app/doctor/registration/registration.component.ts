@@ -15,7 +15,8 @@ export class RegistrationComponent {
 
   constructor(private doctorRegisterService:DoctorRegisterService){}
 
-              checkLoginArray:DoctorRegistration[]=[]
+             
+           
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.

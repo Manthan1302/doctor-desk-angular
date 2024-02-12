@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "allDoctors": [
     {
       "id": 0,
@@ -26,6 +27,37 @@
         "doctorSpecialization": "Dermatologist",
         "doctorRegistrationNumber": "12356478954"
       }
+=======
+    "allDoctors":[
+        {
+            "id":0,
+            "doctorName":"Arjun",
+            "doctorPhoneNumber":7301949431,
+            "doctorGender":"Male",
+            "doctorEmail":"Arjun@gmail.com",
+            "doctorClinicName":"AK Clinic",
+            "doctorClinicAddress":"Parasnagar",
+            "doctorSpecialization":"Orthopedic",
+            "doctorRegistrationNumber":1234565432,
+            "doctorRegisterPassword":"0000",
+            "doctorRegisterConfirmPassword":"0000"
+        }
+        ,
+        {
+            "id":1,
+            "doctorName":"sanjay",
+            "doctorPhoneNumber":8301949431,
+            "doctorGender":"Male",
+            "doctorEmail":"Arjun@gmail.com",
+            "doctorClinicName":"AK Clinic",
+            "doctorClinicAddress":"Parasnagar",
+            "doctorSpecialization":"Orthopedic",
+            "doctorRegistrationNumber":1234565432,
+            "doctorRegisterPassword":"1111",
+            "doctorRegisterConfirmPassword":"1111"
+        }
+        
+>>>>>>> 99f6488ae9240f3add866dd8e8ce3e869a01f285
     ]
   ]
 }
