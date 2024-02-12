@@ -17,8 +17,7 @@ export class DoctorRegisterService{
 
     // doctor Register Api
     RegisterDoctor(RegisterDetails:DoctorRegistration){
-        this.docotrsArray.push(RegisterDetails)
-        return this.http.post(this.RegistrationApi,this.docotrsArray)
+        return this.http.post(this.RegistrationApi,RegisterDetails)
     }
 
 
@@ -26,7 +25,7 @@ export class DoctorRegisterService{
         return this.http.get(this.RegistrationApi)
     }
 
-    
+
 
 
 

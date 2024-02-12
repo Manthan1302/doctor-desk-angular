@@ -17,8 +17,8 @@ export class DoctorLoginService {
   userMatch: boolean = false;
 
   LoginDoctor() {
-    let doctorContactLogin = 8301949431;
-    let password = '1111';
+    let doctorContactLogin = 1234567890;
+    let password = '0000';
 
     this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe((e) => {
       // console.log(e.forEach);

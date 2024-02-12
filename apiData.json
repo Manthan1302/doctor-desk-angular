@@ -1,63 +1,30 @@
 {
-<<<<<<< HEAD
   "allDoctors": [
     {
       "id": 0,
       "doctorName": "Arjun",
-      "doctorPhoneNumber": 7301949431,
+      "doctorPhoneNumber": 8301949431,
       "doctorGender": "Male",
       "doctorEmail": "Arjun@gmail.com",
       "doctorClinicName": "AK Clinic",
       "doctorClinicAddress": "Parasnagar",
       "doctorSpecialization": "Orthopedic",
       "doctorRegistrationNumber": 1234565432,
-      "doctorRegisterPassword": "0000",
-      "doctorRegisterConfirmPassword": "0000"
+      "doctorRegisterPassword": "1111",
+      "doctorRegisterConfirmPassword": "1111"
     },
-    [
-      {
-        "doctorName": "jeel",
-        "doctorPhoneNumber": "9510287327",
-        "doctorGender": "Male",
-        "doctorEmail": "pateljeel@gmail.com",
-        "doctorRegisterPassword": "123456",
-        "doctorRegisterConfirmPassword": "123456",
-        "doctorClinicName": "hello clinic",
-        "doctorClinicAddress": "vastral ahmedabad",
-        "doctorSpecialization": "Dermatologist",
-        "doctorRegistrationNumber": "12356478954"
-      }
-=======
-    "allDoctors":[
-        {
-            "id":0,
-            "doctorName":"Arjun",
-            "doctorPhoneNumber":7301949431,
-            "doctorGender":"Male",
-            "doctorEmail":"Arjun@gmail.com",
-            "doctorClinicName":"AK Clinic",
-            "doctorClinicAddress":"Parasnagar",
-            "doctorSpecialization":"Orthopedic",
-            "doctorRegistrationNumber":1234565432,
-            "doctorRegisterPassword":"0000",
-            "doctorRegisterConfirmPassword":"0000"
-        }
-        ,
-        {
-            "id":1,
-            "doctorName":"sanjay",
-            "doctorPhoneNumber":8301949431,
-            "doctorGender":"Male",
-            "doctorEmail":"Arjun@gmail.com",
-            "doctorClinicName":"AK Clinic",
-            "doctorClinicAddress":"Parasnagar",
-            "doctorSpecialization":"Orthopedic",
-            "doctorRegistrationNumber":1234565432,
-            "doctorRegisterPassword":"1111",
-            "doctorRegisterConfirmPassword":"1111"
-        }
-        
->>>>>>> 99f6488ae9240f3add866dd8e8ce3e869a01f285
-    ]
+    {
+      "doctorName": "manthan",
+      "doctorPhoneNumber": 1234567890,
+      "doctorGender": "Other",
+      "doctorEmail": "manthan@gmail.com",
+      "doctorRegisterPassword": "0000",
+      "doctorRegisterConfirmPassword": "0000",
+      "doctorClinicName": "manthan clinic",
+      "doctorClinicAddress": "isanpur",
+      "doctorSpecialization": "Cardiologist",
+      "doctorRegistrationNumber": 111111111111,
+      "id": 1
+    }
   ]
 }
