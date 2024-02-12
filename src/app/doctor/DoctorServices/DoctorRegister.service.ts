@@ -16,8 +16,8 @@ export class DoctorRegisterService{
 
 
     // doctor Register Api
-    RegisterDoctor(RegisterDetails:NgForm){
-        this.docotrsArray.push(RegisterDetails.value)
+    RegisterDoctor(RegisterDetails:DoctorRegistration){
+        this.docotrsArray.push(RegisterDetails)
         return this.http.post(this.RegistrationApi,this.docotrsArray)
     }
 

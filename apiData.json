@@ -1,19 +1,31 @@
 {
-    "allDoctors":[
-        {
-            "id":0,
-            "doctorName":"Arjun",
-            "doctorPhoneNumber":7301949431,
-            "doctorGender":"Male",
-            "doctorEmail":"Arjun@gmail.com",
-            "doctorClinicName":"AK Clinic",
-            "doctorClinicAddress":"Parasnagar",
-            "doctorSpecialization":"Orthopedic",
-            "doctorRegistrationNumber":1234565432,
-            "doctorRegisterPassword":"0000",
-            "doctorRegisterConfirmPassword":"0000"
-        }
-        
+  "allDoctors": [
+    {
+      "id": 0,
+      "doctorName": "Arjun",
+      "doctorPhoneNumber": 7301949431,
+      "doctorGender": "Male",
+      "doctorEmail": "Arjun@gmail.com",
+      "doctorClinicName": "AK Clinic",
+      "doctorClinicAddress": "Parasnagar",
+      "doctorSpecialization": "Orthopedic",
+      "doctorRegistrationNumber": 1234565432,
+      "doctorRegisterPassword": "0000",
+      "doctorRegisterConfirmPassword": "0000"
+    },
+    [
+      {
+        "doctorName": "jeel",
+        "doctorPhoneNumber": "9510287327",
+        "doctorGender": "Male",
+        "doctorEmail": "pateljeel@gmail.com",
+        "doctorRegisterPassword": "123456",
+        "doctorRegisterConfirmPassword": "123456",
+        "doctorClinicName": "hello clinic",
+        "doctorClinicAddress": "vastral ahmedabad",
+        "doctorSpecialization": "Dermatologist",
+        "doctorRegistrationNumber": "12356478954"
+      }
     ]
+  ]
 }
-

@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="card-title text-center mb-4">Doctor Registration Form</h3>
-                    <form #doctorRegistrationForm="ngForm" (ngSubmit)="RegisterDoctor(doctorRegistrationForm.value)">
+                    <form #doctorRegistrationForm="ngForm" (ngSubmit)="registerDoctor(doctorRegistrationForm.value)">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Doctor Name" ngModel name="doctorName">
                         </div>
