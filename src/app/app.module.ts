@@ -12,6 +12,9 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { DashbordComponent } from './doctor/dashbord/dashbord.component';
 import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
+import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
+import { PatientLoginComponent } from './patient/patient-login/patient-login.component';
+import { PatientDashboardComponent } from './patient/patient-dashboard/patient-dashboard.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/do
     RegistrationComponent,
     LoginComponent,
     DashbordComponent,
-    DoctorViewapointmentComponent
+    DoctorViewapointmentComponent,
+    PatientRegistrationComponent,
+    PatientLoginComponent,
+    PatientDashboardComponent
   ],
   imports: [
     BrowserModule,
