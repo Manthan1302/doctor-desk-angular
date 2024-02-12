@@ -21,6 +21,8 @@ const routes: Routes = [
     path: "doctordashbord", component: DashbordComponent,
     children: [
       { path: "home", component: DoctorViewapointmentComponent }
+
+
     ]
   },
   // patient routes

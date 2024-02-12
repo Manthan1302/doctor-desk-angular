@@ -13,10 +13,10 @@ import { DoctorRegistration } from '../doctorModel/DoctorRegistrationModel';
 export class RegistrationComponent {
 
 
-  constructor(private doctorRegisterService:DoctorRegisterService,
-              private doctorLoginService:DoctorLoginService){}
+  constructor(private doctorRegisterService:DoctorRegisterService){}
 
-              checkLoginArray:DoctorRegistration[]=[]
+             
+           
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -26,10 +26,9 @@ export class RegistrationComponent {
       
     // })
 
-    this.doctorLoginService.LoginDoctor()
   }
   //doctor Register Function
-  registerDoctor(form:NgForm){
+  registerDoctor(form:DoctorRegistration){
     this.doctorRegisterService.RegisterDoctor(form).subscribe(result=>{
       if(result){
         return alert("Data Added")
@@ -41,7 +40,9 @@ export class RegistrationComponent {
 
 
 
+
   RegisterDoctor(data:DoctorRegistration){
     console.log(data); 
   }
+
 }

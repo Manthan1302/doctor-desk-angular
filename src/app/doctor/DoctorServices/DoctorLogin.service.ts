@@ -1,62 +1,73 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { DoctorRegistration } from "../doctorModel/DoctorRegistrationModel";
-import { Observable } from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { DoctorRegistration } from '../doctorModel/DoctorRegistrationModel';
+import { Observable } from 'rxjs';
+import { RouteConfigLoadStart, Router } from '@angular/router';
 
 @Injectable({
-    providedIn:'root'
+  providedIn: 'root',
 })
-export  class DoctorLoginService{
+export class DoctorLoginService {
+  constructor(private http: HttpClient,
+    private router:Router) {}
 
-    constructor(private http: HttpClient) {}
+  RegistrationApi = 'http://localhost:3000/allDoctors';
 
-    RegistrationApi='http://localhost:3000/allDoctors'
+  checkLoginArray: DoctorRegistration[] = [];
+  LogedUser!: DoctorRegistration;
 
-    checkLoginArray:DoctorRegistration[]=[]
 
-    userMatch:boolean=false
+  userMatch: boolean = false;
 
-    LoginDoctor(){
-        let doctorContactLogin=7301949431
-        let password="0000"
-        console.log("hello");
+
+  LoginDoctor(data:DoctorRegistration) {
+
+
+
+    let doctorContactLogin = 1234567890;
+    let password = '0000';
+
+    this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe((e) => {
+        // console.log(Doctornumber,Doctorpassword);
         
-        this.http.get<DoctorRegistration []>(this.RegistrationApi).subscribe(e=>{
-        
-            // console.log(e.forEach);
-            e.forEach(e1=>{
-                if(e1.doctorPhoneNumber===doctorContactLogin && e1.doctorRegisterPassword===password){
-                    this.userMatch=true
-                    return 
-                    
-                }else{
-                    this.userMatch=false
-                }
-            })
-            
-        })
+      // console.log(e.forEach);
+      e.forEach((e1) => {
+        // console.log(e1);
+        // console.log(e1.doctorPhoneNumber, Number(e1.doctorRegisterPassword));
+        // console.log(
+        //   e1.doctorPhoneNumber === data.doctorPhoneNumber &&
+        //     e1.doctorRegisterPassword === data.doctorRegisterPassword
+        // );
+       
 
-        if(this.userMatch){
-            console.log(this.userMatch);
-            alert("user match")
+        if (
+          e1.doctorPhoneNumber === data.doctorPhoneNumber &&
+          e1.doctorRegisterPassword === data.doctorRegisterPassword
+        ) {
+          this.LogedUser = e1
+          this.userMatch = true;
+          return;
         }else{
-            console.log(this.userMatch);
-
-            // alert("invalid user")
-
+            this.userMatch=false
         }
-        // .subscribe((e)=>{
-        // // return e
-        //     console.log(e);
-        
-            
-        // })
-        // console.log("dsds",this.checkLoginArray);
+        // console.log(this.userMatch);
+      });
 
-        
-        // this.docotrsArray.push(RegisterDetails.value)
-        // return this.http.post(this.RegistrationApi,this.docotrsArray)
-    }
+    //   console.log(this.userMatch);
 
+      console.log(this.userMatch);
+      if (this.userMatch) {
+        console.log(this.userMatch);
+        sessionStorage.setItem('LogedDoctor',JSON.stringify(this.LogedUser))
+        this.router.navigate(['doctordashbord'])
+      } else {
+        console.log(this.userMatch);
+
+        alert('invalid user');
+      }
+    });
+    // console.log(this.userMatch);
+    
+  }
 }
