@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DoctorRegistration } from '../doctorModel/DoctorRegistrationModel';
 
 @Component({
   selector: 'app-registration',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class RegistrationComponent {
 
+  RegisterDoctor(data:DoctorRegistration){
+    console.log(data);
+    
+  }
 }

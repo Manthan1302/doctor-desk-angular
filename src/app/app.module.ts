@@ -12,6 +12,8 @@ import { LoginComponent } from './doctor/login/login.component';
 
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { DashbordComponent } from './doctor/dashbord/dashbord.component';
+import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     PatientComponent,
     AskingPageComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    DashbordComponent,
+    DoctorViewapointmentComponent
   ],
   imports: [
     BrowserModule,
