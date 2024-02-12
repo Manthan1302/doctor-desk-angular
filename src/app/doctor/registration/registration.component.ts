@@ -14,19 +14,15 @@ export class RegistrationComponent {
 
 
   constructor(private doctorRegisterService:DoctorRegisterService,
-              private doctorLoginService:DoctorLoginService){}
+             ){}
 
-              checkLoginArray:DoctorRegistration[]=[]
+             
+           
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    // this.doctorRegisterService.getDoctor().subscribe(e=>{
-    //   console.log(e);
-      
-    // })
-
-    this.doctorLoginService.LoginDoctor()
+  
   }
   //doctor Register Function
   registerDoctor(form:NgForm){

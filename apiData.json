@@ -13,6 +13,20 @@
             "doctorRegisterPassword":"0000",
             "doctorRegisterConfirmPassword":"0000"
         }
+        ,
+        {
+            "id":1,
+            "doctorName":"sanjay",
+            "doctorPhoneNumber":8301949431,
+            "doctorGender":"Male",
+            "doctorEmail":"Arjun@gmail.com",
+            "doctorClinicName":"AK Clinic",
+            "doctorClinicAddress":"Parasnagar",
+            "doctorSpecialization":"Orthopedic",
+            "doctorRegistrationNumber":1234565432,
+            "doctorRegisterPassword":"1111",
+            "doctorRegisterConfirmPassword":"1111"
+        }
         
     ]
 }
