@@ -38,8 +38,21 @@
       "PatientCity": "Ahmadabad",
       "PatientState": "Gujarat",
       "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
+      "PatientDateOfBirth": "2002-07-13",
       "PatientPassword": "1234"
+    },
+    {
+      "PatientName": "Arjun",
+      "PatientEmail": "a@gmail.com",
+      "PatientPhoneNumber": 7567527578,
+      "PatientDateOfBirth": "2001-05-21",
+      "PatientAddress": "vastral",
+      "PatientCity": "Ahmadabad",
+      "PatientState": "Gujarat",
+      "PatientPinCode": "123456",
+      "PatientPassword": "1234",
+      "PatientGender": "Male",
+      "id": 1
     }
   ]
 }
