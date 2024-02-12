@@ -13,26 +13,26 @@ import { DoctorRegistration } from '../doctorModel/DoctorRegistrationModel';
 export class RegistrationComponent {
 
 
-  constructor(private doctorRegisterService:DoctorRegisterService){}
+  constructor(private doctorRegisterService: DoctorRegisterService) { }
 
-             
-           
+
+
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     // this.doctorRegisterService.getDoctor().subscribe(e=>{
     //   console.log(e);
-      
+
     // })
 
   }
   //doctor Register Function
-  registerDoctor(form:DoctorRegistration){
-    this.doctorRegisterService.RegisterDoctor(form).subscribe(result=>{
-      if(result){
+  registerDoctor(form: DoctorRegistration) {
+    this.doctorRegisterService.RegisterDoctor(form).subscribe(result => {
+      if (result) {
         return alert("Data Added")
-      }else{
+      } else {
         return alert("something Went Wrong")
       }
     })
@@ -41,8 +41,8 @@ export class RegistrationComponent {
 
 
 
-  RegisterDoctor(data:DoctorRegistration){
-    console.log(data); 
+  RegisterDoctor(data: DoctorRegistration) {
+    console.log(data);
   }
 
 }

@@ -1,0 +1,20 @@
+<body>
+
+    <div class="container mt-5 mb-5">
+        <div class="row g-2">
+            <div class="col-md-3" *ngFor="let item of doctors">
+                <div class="card p-2 py-3 text-center">
+                    <div class="img mb-2">
+                        <img src="../../../assets/images/patientRegistration.jpg" width="70" class="rounded-circle">
+                    </div>
+                    <h5 class="mb-0">{{item.doctorName}}</h5>
+                    <small>{{item.doctorSpecialization}}</small>
+                    <div class="mt-4 apointment">
+                        <button class="btn btn-info text-uppercase"><i class="bi bi-eye text-info"></i></button>
+                        <button class="btn btn-success text-uppercase">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

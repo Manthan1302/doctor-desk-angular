@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class PatientLoginService {
 
   userMatch: boolean = false;
+  loggedPatient!:PatientRegistration;
   constructor(private httpClient: HttpClient, private router: Router) { }
   getPatient: string = "http://localhost:3000/allPatient"
 
@@ -24,6 +25,7 @@ export class PatientLoginService {
         if (e.PatientPhoneNumber === data.PatientPhoneNumber && e.PatientPassword === data.PatientPassword) {
         
           this.userMatch = true;
+          this.loggedPatient=e
           console.log(this.userMatch);
           return;
         }
@@ -36,12 +38,18 @@ export class PatientLoginService {
       console.log(this.userMatch);
 
       if (this.userMatch) {
-        alert('success')
-        // this.router.navigate(['/patientDashboard'])
+        sessionStorage.setItem('loggedPatient',JSON.stringify(this.loggedPatient))
+        this.router.navigate(['/patientDashboard'])
       }
       else {
         alert("error")
       }
     })
   }
+
+  logoutPatient(){
+    sessionStorage.removeItem('loggedPatient');
+    this.router.navigate(['/patientLogin'])
+  }
 }
+

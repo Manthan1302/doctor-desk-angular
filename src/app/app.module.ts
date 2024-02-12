@@ -17,6 +17,9 @@ import { PatientLoginComponent } from './patient/patient-login/patient-login.com
 import { PatientDashboardComponent } from './patient/patient-dashboard/patient-dashboard.component';
 import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.component';
 
+import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
+import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.c
     PatientRegistrationComponent,
     PatientLoginComponent,
     PatientDashboardComponent,
-    DoctorProfileComponent
+    DoctorProfileComponent,
+    AllDoctorsComponent,
+    PatientProfileComponent
   ],
   imports: [
     BrowserModule,
