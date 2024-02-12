@@ -9,6 +9,19 @@
       "doctorGender": "Female",
       "doctorRegisterPassword": "0000",
       "doctorRegisterConfirmPassword": "0000",
+      "id": 0,
+      "doctorSpecialization": "Orthopedic",
+      "doctorRegistrationNumber": 1234565432
+    },
+    {
+      "doctorName": "Jeel patel",
+      "doctorEmail": "manthan@gmail.com",
+      "doctorPhoneNumber": 7201914901,
+      "doctorClinicName": "manthan clinic",
+      "doctorClinicAddress": "isanpur",
+      "doctorGender": "Female",
+      "doctorRegisterPassword": "0000",
+      "doctorRegisterConfirmPassword": "0000",
       "doctorSpecialization": "Cardiologist",
       "doctorRegistrationNumber": 111111111111,
       "id": 1
@@ -16,43 +29,29 @@
   ],
   "allPatient": [
     {
-      "id": 0,
-      "PatientName": "Manthan",
+      "PatientName": "Arjun",
+      "PatientEmail": "manthan@gmail.com",
       "PatientPhoneNumber": 6352896341,
-      "PatientGender": "Male",
-      "PatientEmail": "manthan@gmail.com",
+      "PatientDateOfBirth": "13-07-2002",
       "PatientAddress": "isanpur",
       "PatientCity": "Ahmadabad",
       "PatientState": "Gujarat",
       "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
-      "PatientPassword": "1234"
+      "PatientPassword": "1234",
+      "PatientGender": "Male",
+      "id": 0
     },
     {
-      "id": 1,
-      "PatientName": "Abc",
+      "PatientName": "Arjun",
+      "PatientEmail": "a@gmail.com",
       "PatientPhoneNumber": 7567527578,
-      "PatientGender": "Male",
-      "PatientEmail": "manthan@gmail.com",
-      "PatientAddress": "isanpur",
+      "PatientDateOfBirth": "2001-05-21",
+      "PatientAddress": "vastral",
       "PatientCity": "Ahmadabad",
       "PatientState": "Gujarat",
-      "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
-      "PatientPassword": "1234"
-    },
-    {
-      "id": 2,
-      "PatientName": "Abc",
-      "PatientPhoneNumber": 1234567890,
-      "PatientGender": "Male",
-      "PatientEmail": "manthan@gmail.com",
-      "PatientAddress": "isanpur",
-      "PatientCity": "Ahmadabad",
-      "PatientState": "Gujarat",
-      "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
-      "PatientPassword": "1234"
+      "PatientPinCode": "123456",
+      "PatientPassword": "1234",
+      "PatientGender": "Male"
     },
     {
       "PatientName": "arjun",
