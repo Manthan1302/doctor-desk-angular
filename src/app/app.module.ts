@@ -40,7 +40,7 @@ import { PatientProfileComponent } from './patient/patient-profile/patient-profi
     DoctorAppointmentComponent,
     HomeComponent,
     AllDoctorsComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
   ],
   imports: [
     BrowserModule,

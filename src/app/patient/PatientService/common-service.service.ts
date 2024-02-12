@@ -11,9 +11,15 @@ export class CommonServiceService {
 
 
   constructor(private httpClient: HttpClient, private router: Router) { }
+
+  bookingData: DoctorRegistration | null = null;
   getPatient: string = "http://localhost:3000/allDoctors"
   
   getAllDoctors(){
     return this.httpClient.get<DoctorRegistration[]>(this.getPatient)
+  }
+
+  getBookingData(){
+    return this.bookingData;
   }
 }
