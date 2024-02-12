@@ -29,17 +29,30 @@
   ],
   "allPatient": [
     {
-      "id": 0,
-      "PatientName": "Manthan",
-      "PatientPhoneNumber": 6352896341,
-      "PatientGender": "Male",
+      "PatientName": "Arjun",
       "PatientEmail": "manthan@gmail.com",
+      "PatientPhoneNumber": 6352896341,
+      "PatientDateOfBirth": "13-07-2002",
       "PatientAddress": "isanpur",
       "PatientCity": "Ahmadabad",
       "PatientState": "Gujarat",
       "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
-      "PatientPassword": "1234"
+      "PatientPassword": "1234",
+      "PatientGender": "Male",
+      "id": 0
+    },
+    {
+      "PatientName": "Arjun",
+      "PatientEmail": "a@gmail.com",
+      "PatientPhoneNumber": 7567527578,
+      "PatientDateOfBirth": "2001-05-21",
+      "PatientAddress": "vastral",
+      "PatientCity": "Ahmadabad",
+      "PatientState": "Gujarat",
+      "PatientPinCode": "123456",
+      "PatientPassword": "1234",
+      "PatientGender": "Male",
+      "id": 1
     }
   ]
 }

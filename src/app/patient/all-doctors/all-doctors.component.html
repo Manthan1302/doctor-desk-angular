@@ -1,25 +1,28 @@
-<body>
 
-  <div class="container mt-5 mb-5">
-    <div class="row g-2">
-      <div class="col-md-3" *ngFor="let item of doctors">
-        <div class="card p-2 py-3 text-center">
-          <div class="img mb-2">
-            <img src="../../../assets/images/patientRegistration.jpg" width="70" class="rounded-circle">
-          </div>
-          <h5 class="mb-0">{{item.doctorName}}</h5>
-          <small>{{item.doctorSpecialization}}</small>
-          <div class="mt-4 apointment">
-            <button class="btn btn-info text-uppercase"><i class="bi bi-eye text-info" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop" (click)="openmodal(item)"></i></button>
-
+<body style="background-color: #eee;">
+    <div class="container mt-5 mb-5" >
+        <div class="row g-2">
+            <div class="col-md-3" *ngFor="let item of doctors">
+                <div class="card p-2 py-3 text-center">
+                    <div class="img mb-2">
+                        <img src="../../../assets/images/doctor.jpg" width="100" class="rounded-circle">
+                    </div>
+                    <h5 class="mb-0">{{item.doctorName}}</h5>
+                    <small>{{item.doctorSpecialization}}</small>
+                    <div class="mt-4 apointment">
+                      <button class="btn btn-info text-uppercase"><i class="bi bi-eye text-info" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" (click)="openmodal(item)"></i></button>
+                        
             <button class="btn btn-success text-uppercase" data-bs-toggle="modal" data-bs-target="#bookappointmentmodal"
-              (click)="bookappointment(item)">Book Appointment</button>
-          </div>
+            (click)="bookappointment(item)">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <br>
+
     </div>
-  </div>
+  
 
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
