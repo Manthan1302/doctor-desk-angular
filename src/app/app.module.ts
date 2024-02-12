@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Injectable, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
  
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,7 @@ import { LoginComponent } from './doctor/login/login.component';
 
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
-
+import { DoctorRegisterService } from './doctor/DoctorServices/DoctorRegister.service';
 
 @NgModule({
   declarations: [

@@ -6,7 +6,7 @@ export class DoctorRegistration{
     doctorClinicName:string|null=null
     doctorClinicAddress:string|null=null
     doctorSpecialization:string|null=null
-    doctorRegistrationNumber:string|null=null
+    doctorRegistrationNumber:number|null=null
     doctorRegisterPassword:string|null=null
     doctorRegisterConfirmPassword:string|null=null
 }
