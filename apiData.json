@@ -25,6 +25,19 @@
       "doctorSpecialization": "Dermatologist",
       "doctorRegistrationNumber": 12356478954,
       "id": 1
+    },
+    {
+      "doctorName": "mantah",
+      "doctorPhoneNumber": 123456789,
+      "doctorGender": "Male",
+      "doctorEmail": "man@gmail.com",
+      "doctorRegisterPassword": "123123",
+      "doctorRegisterConfirmPassword": "123123",
+      "doctorClinicName": "kjsak",
+      "doctorClinicAddress": "kklk",
+      "doctorSpecialization": "Cardiologist",
+      "doctorRegistrationNumber": 154564,
+      "id": 2
     }
   ]
 }

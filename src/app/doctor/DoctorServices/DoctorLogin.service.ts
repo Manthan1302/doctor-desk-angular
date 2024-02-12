@@ -48,8 +48,6 @@ export class DoctorLoginService {
           this.LogedUser = e1
           this.userMatch = true;
           return;
-        }else{
-            this.userMatch=false
         }
         // console.log(this.userMatch);
       });
