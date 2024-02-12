@@ -14,4 +14,5 @@ export class PatientRegistrationServiceService {
   RegisterPatient(data:PatientRegistration){
     return this.httpClient.post(this.patientRegistrationApi,data)
   }
+  
 }
