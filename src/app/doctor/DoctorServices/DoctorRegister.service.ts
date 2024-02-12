@@ -25,7 +25,7 @@ export class DoctorRegisterService{
         return this.http.get(this.RegistrationApi)
     }
 
-    
+
 
 
 

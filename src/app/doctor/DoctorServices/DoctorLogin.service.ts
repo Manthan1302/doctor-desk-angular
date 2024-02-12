@@ -20,8 +20,13 @@ export class DoctorLoginService {
 
   userMatch: boolean = false;
 
+
   LoginDoctor(data:DoctorRegistration) {
 
+
+
+    let doctorContactLogin = 1234567890;
+    let password = '0000';
 
     this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe((e) => {
         // console.log(Doctornumber,Doctorpassword);
