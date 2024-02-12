@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { DashbordComponent } from './doctor/dashbord/dashbord.component';
 import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
+import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/do
     RegistrationComponent,
     LoginComponent,
     DashbordComponent,
-    DoctorViewapointmentComponent
+    DoctorViewapointmentComponent,
+    DoctorProfileComponent
   ],
   imports: [
     BrowserModule,
