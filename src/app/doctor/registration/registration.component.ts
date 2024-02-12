@@ -37,4 +37,12 @@ export class RegistrationComponent {
       }
     })
   }
+
+
+
+
+  RegisterDoctor(data:DoctorRegistration){
+    console.log(data); 
+  }
+
 }

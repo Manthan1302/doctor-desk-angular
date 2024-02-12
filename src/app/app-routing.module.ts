@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DoctorComponent } from './doctor/doctor.component';
@@ -7,19 +8,34 @@ import { RegistrationComponent } from './doctor/registration/registration.compon
 import { LoginComponent } from './doctor/login/login.component';
 import { DashbordComponent } from './doctor/dashbord/dashbord.component';
 import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
+import { PatientLoginComponent } from './patient/patient-login/patient-login.component';
+import { PatientDashboardComponent } from './patient/patient-dashboard/patient-dashboard.component';
+import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
 import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.component';
+import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-appointment.component';
+import { HomeComponent } from './doctor/home/home.component';
 
 const routes: Routes = [
-  {path:"",component:AskingPageComponent},
-  {path:"doctorregistration",component:RegistrationComponent},
-  {path:"doctorlogin",component:LoginComponent},
-  {path:"doctordashbord",component:DashbordComponent,
-    children:[
-      {path:"home",component:DoctorViewapointmentComponent},
-      {path:"profile",component:DoctorProfileComponent}
+  { path: "", component: AskingPageComponent },
+  // doctor  routes
+  { path: "doctorregistration", component: RegistrationComponent },
+  { path: "doctorlogin", component: LoginComponent },
+  {
+    path: "doctordashbord", component: DashbordComponent,
+    children: [
+      { path: "", component: HomeComponent },
+      { path: "appointment", component:DoctorAppointmentComponent },
+      { path: "profile", component: DoctorProfileComponent },
+
+
+
 
     ]
-  }
+  },
+  // patient routes
+  { path: "patientRegistration", component: PatientRegistrationComponent },
+  { path: "patientLogin", component: PatientLoginComponent },
+  { path: "patientDashboard", component: PatientDashboardComponent },
 
 
 
