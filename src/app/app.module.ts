@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { PatientComponent } from './patient/patient.component';
-
 import { AskingPageComponent } from './asking-page/asking-page.component';
 import { RegistrationComponent } from './doctor/registration/registration.component';
 import { LoginComponent } from './doctor/login/login.component';
-
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
-import { DoctorRegisterService } from './doctor/DoctorServices/DoctorRegister.service';
+import { DashbordComponent } from './doctor/dashbord/dashbord.component';
+import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +21,9 @@ import { DoctorRegisterService } from './doctor/DoctorServices/DoctorRegister.se
     PatientComponent,
     AskingPageComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    DashbordComponent,
+    DoctorViewapointmentComponent
   ],
   imports: [
     BrowserModule,

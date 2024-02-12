@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DoctorRegisterService } from './../DoctorServices/DoctorRegister.service';
 import { NgForm } from '@angular/forms';
 import { DoctorLoginService } from '../DoctorServices/DoctorLogin.service';
+
 import { DoctorRegistration } from '../doctorModel/DoctorRegistrationModel';
 
 @Component({
@@ -40,4 +41,8 @@ export class RegistrationComponent {
 
 
 
+  RegisterDoctor(data:DoctorRegistration){
+    console.log(data);
+    
+  }
 }
