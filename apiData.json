@@ -12,6 +12,19 @@
       "doctorRegistrationNumber": 1234565432,
       "doctorRegisterPassword": "0000",
       "doctorRegisterConfirmPassword": "0000"
+    },
+    {
+      "doctorName": "manthan",
+      "doctorPhoneNumber": 6352896341,
+      "doctorGender": "Male",
+      "doctorEmail": "Manthan@gmail.com",
+      "doctorRegisterPassword": "1234",
+      "doctorRegisterConfirmPassword": "1234",
+      "doctorClinicName": "abc",
+      "doctorClinicAddress": "isanpur",
+      "doctorSpecialization": "Cardiologist",
+      "doctorRegistrationNumber": 111111111111,
+      "id": 1
     }
   ],
   "allPatient": [
@@ -19,19 +32,6 @@
       "id": 0,
       "PatientName": "Manthan",
       "PatientPhoneNumber": 6352896341,
-      "PatientGender": "Male",
-      "PatientEmail": "manthan@gmail.com",
-      "PatientAddress": "isanpur",
-      "PatientCity": "Ahmadabad",
-      "PatientState": "Gujarat",
-      "PatientPinCode": 382443,
-      "PatientDateOfBirth": "13-07-2002",
-      "PatientPassword": "1234"
-    },
-    {
-      "id": 2,
-      "PatientName": "Abc",
-      "PatientPhoneNumber": 1234567890,
       "PatientGender": "Male",
       "PatientEmail": "manthan@gmail.com",
       "PatientAddress": "isanpur",
