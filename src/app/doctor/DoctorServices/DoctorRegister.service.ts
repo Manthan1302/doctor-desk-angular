@@ -8,15 +8,31 @@ import { Injectable } from "@angular/core";
 })
 export class DoctorRegisterService{
 
-    constructor(private http: HttpClient) {}
-
     RegistrationApi:string='http://localhost:3000/allDoctors'
-
+    constructor(private http: HttpClient) {
+        // this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe(res=>{
+        //     console.log(res.length);
+        //     this.length=res.length
+        //     console.log(this.length);
+            
+            
+        // })
+    }
+    
+    
     docotrsArray:DoctorRegistration[]=[]
-
-
+    length:number=0
+    
+    
+    
+    
     // doctor Register Api
     RegisterDoctor(RegisterDetails:DoctorRegistration){
+        // RegisterDetails.doctorId=this.length+1
+    
+        // this.docotrsArray.push(RegisterDetails)
+        // console.log(this.length);
+        
         return this.http.post(this.RegistrationApi,RegisterDetails)
     }
 

@@ -12,10 +12,12 @@ import { PatientLoginComponent } from './patient/patient-login/patient-login.com
 import { PatientDashboardComponent } from './patient/patient-dashboard/patient-dashboard.component';
 import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
 import { DoctorProfileComponent } from './doctor/doctor-profile/doctor-profile.component';
-import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-appointment.component';
-import { HomeComponent } from './doctor/home/home.component';
+
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
 import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
+import { HomeComponent } from './doctor/home/home.component';
+import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-appointment.component';
+
 
 const routes: Routes = [
   { path: "", component: AskingPageComponent },
@@ -28,10 +30,6 @@ const routes: Routes = [
       { path: "", component: HomeComponent },
       { path: "appointment", component:DoctorAppointmentComponent },
       { path: "profile", component: DoctorProfileComponent },
-
-
-
-
     ]
   },
   // patient routes
