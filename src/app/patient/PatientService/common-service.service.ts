@@ -13,7 +13,12 @@ export class CommonServiceService {
   loggedPatient!: PatientRegistration;
   id: number | null = null;
   constructor(private httpClient: HttpClient, private router: Router) { }
+
+
+  bookingData: DoctorRegistration | null = null;
   url: string = "http://localhost:3000"
+  
+
 
   getAllDoctors() {
     const path = this.url + '/allDoctors';
@@ -31,5 +36,10 @@ export class CommonServiceService {
     const path = `${this.url}/allPatient/${this.id}`;
     return this.httpClient.put(path, this.loggedPatient)
 
+
+  }
+
+  getBookingData(){
+    return this.bookingData;
   }
 }

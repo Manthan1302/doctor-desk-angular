@@ -1,129 +1,196 @@
 <section class="h-100 bg-light">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col">
-                <div class="card card-registration my-4">
-                    <div class="row g-0">
-                        <div class="col-xl-6 d-none d-xl-block">
-                            <img src="../../../assets/images/patientRegistration.jpg" alt="Sample photo"
-                                class="img-fluid"
-                                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-                        </div>
-
-
-                        <div class="col-xl-6">
-                            <form #patientRegistration="ngForm"
-                                (ngSubmit)="RegistrationPatient(patientRegistration.value)">
-                                <div class="card-body p-md-5 text-black">
-                                    <h3 class="mb-5 text-uppercase">Patient registration form</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" class="form-control form-control-lg"
-                                                    name="PatientName" ngModel />
-                                                <label class="form-label">Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" class="form-control form-control-lg"
-                                                    name="PatientEmail" ngModel />
-                                                <label class="form-label">Email</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="number"
-                                                    class="form-control form-control-lg" name="PatientPhoneNumber"
-                                                    ngModel />
-                                                <label class="form-label" for="form3Example1m1">Phone Number</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="date" id="form3Example1n1"
-                                                    class="form-control form-control-lg" name="PatientDateOfBirth"
-                                                    ngModel />
-                                                <label class="form-label" for="form3Example1n1">DOB</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-
-                                        <h6 class="mb-0 me-4">Gender: </h6>
-
-                                        <div class="form-check form-check-inline mb-0 me-4">
-                                            <input class="form-check-input" type="radio" name="PatientGender"
-                                                value="Male" ngModel />
-                                            <label class="form-check-label">Male</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mb-0 me-4">
-                                            <input class="form-check-input" type="radio" name="PatientGender"
-                                                value="Female" ngModel />
-                                            <label class="form-check-label">Female</label>
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <input type="text" id="form3Example8" class="form-control form-control-lg"
-                                            name="PatientAddress" ngModel />
-                                        <label class="form-label" for="form3Example8">Address</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" 
-                                                    class="form-control form-control-lg" name="PatientCity" ngModel />
-                                                <label class="form-label" for="form3Example1m1">City</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <div class="form-outline">
-                                                <input type="text" 
-                                                    class="form-control form-control-lg" name="PatientState" ngModel />
-                                                <label class="form-label" for="form3Example1n1">State</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="form-outline mb-4">
-                                        <input type="text" id="form3Example90" class="form-control form-control-lg"
-                                            name="PatientPinCode" ngModel />
-                                        <label class="form-label" for="form3Example90">Pincode</label>
-                                    </div>
-
-
-                                    <div class="form-outline mb-4">
-                                        <input type="password" class="form-control form-control-lg" name="PatientPassword"
-                                            ngModel />
-                                        <label class="form-label">Password</label>
-                                    </div>
-
-
-                                    <p>You have an already account? <a routerLink='/patientLogin'
-                                            class="btn btn-color">Login</a></p>
-                                    <div class="d-flex justify-content-end pt-3">
-                                        <button type="button" class="btn btn-light btn-lg"
-                                            (click)="resetForm(patientRegistration)">Reset all</button>
-                                        <button type="submit" class="btn  btn-lg ms-2 btn-color">Submit form</button>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img
+                src="../../../assets/images/patientRegistration.jpg"
+                alt="Sample photo"
+                class="img-fluid"
+                style="
+                  border-top-left-radius: 0.25rem;
+                  border-bottom-left-radius: 0.25rem;
+                "
+              />
             </div>
+
+            <div class="col-xl-6">
+              <form
+                #patientRegistration="ngForm"
+                (ngSubmit)="RegistrationPatient(patientRegistration.value)"
+              >
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Patient registration form</h3>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          name="PatientName"
+                          ngModel
+                        />
+                        <label class="form-label">Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          name="PatientEmail"
+                          ngModel
+                        />
+                        <label class="form-label">Email</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="number"
+                          class="form-control form-control-lg"
+                          name="PatientPhoneNumber"
+                          ngModel
+                        />
+                        <label class="form-label" for="form3Example1m1"
+                          >Phone Number</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="date"
+                          id="form3Example1n1"
+                          class="form-control form-control-lg"
+                          name="PatientDateOfBirth"
+                          ngModel
+                        />
+                        <label class="form-label" for="form3Example1n1"
+                          >DOB</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-md-flex justify-content-start align-items-center mb-4 py-2"
+                  >
+                    <h6 class="mb-0 me-4">Gender:</h6>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="PatientGender"
+                        value="Male"
+                        ngModel
+                      />
+                      <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="PatientGender"
+                        value="Female"
+                        ngModel
+                      />
+                      <label class="form-check-label">Female</label>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      name="PatientAddress"
+                      ngModel
+                    />
+                    <label class="form-label" for="form3Example8"
+                      >Address</label
+                    >
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          name="PatientCity"
+                          ngModel
+                        />
+                        <label class="form-label" for="form3Example1m1"
+                          >City</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          name="PatientState"
+                          ngModel
+                        />
+                        <label class="form-label" for="form3Example1n1"
+                          >State</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      name="PatientPinCode"
+                      ngModel
+                    />
+                    <label class="form-label" for="form3Example90"
+                      >Pincode</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="password"
+                      class="form-control form-control-lg"
+                      name="PatientPassword"
+                      ngModel
+                    />
+                    <label class="form-label">Password</label>
+                  </div>
+
+                  <p>
+                    You have an already account?
+                    <a routerLink="/patientLogin" class="btn btn-color"
+                      >Login</a
+                    >
+                  </p>
+                  <div class="d-flex justify-content-end pt-3">
+                    <button
+                      type="button"
+                      class="btn btn-light btn-lg"
+                      (click)="resetForm(patientRegistration)"
+                    >
+                      Reset all
+                    </button>
+                    <button type="submit" class="btn btn-lg ms-2 btn-color">
+                      Submit form
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
