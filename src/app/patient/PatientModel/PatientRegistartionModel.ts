@@ -1,4 +1,5 @@
 export class PatientRegistration {
+    id:number|null=null
     PatientName: string | null = null
     PatientPhoneNumber: number | null = null
     PatientGender: string | null = null

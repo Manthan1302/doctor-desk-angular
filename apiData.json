@@ -95,20 +95,39 @@
   ],
   "allAppointments": [
     {
-      "doctorId": 101,
-      "patientId": 202,
-      "appointmentDate": "12-05-2020",
-      "appointmentTime": "9-12",
-      "appointmentStatus": "Pending",
+      "appointmentDate": "2024-02-03",
+      "appointmentTime": "00:44",
+      "appointmentDescription": "sfdsfsdfd",
+      "doctorId": 1,
+      "patientId": 0,
       "id": 1
     },
     {
-      "doctorId": 101,
-      "patientId": 202,
-      "appointmentDate": "12-05-2020",
-      "appointmentTime": "9-12",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "appointmentDescription": "manthan",
+      "doctorId": 0,
+      "patientId": 3,
       "appointmentStatus": "Pending",
       "id": 2
+    },
+    {
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "appointmentDescription": "jeel",
+      "doctorId": 0,
+      "patientId": 3,
+      "appointmentStatus": "Pending",
+      "id": 3
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "",
+      "appointmentDescription": "mayur",
+      "doctorId": 1,
+      "patientId": 3,
+      "appointmentStatus": "Pending",
+      "id": 4
     }
   ]
 }

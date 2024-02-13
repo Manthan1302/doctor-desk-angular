@@ -10,13 +10,16 @@ export class BookAppointmentService{
     constructor(private http:HttpClient){}
     apoointmentsApi:string="http://localhost:3000/allAppointments"
 
-    appointmentArray:Appointments=
-        {doctorId:101,patientId:202,appointmentDate:"12-05-2020",appointmentTime:"9-12",appointmentStatus:"Pending",doctoeName:"Arjun",patientName:"Jeel"}
+    // appointmentArray:Appointments=
+    //     {doctorId:101,patientId:202,appointmentDate:"12-05-2020",appointmentTime:"9-12",
+    //     appointmentStatus:"Pending",appointmentDescription:"dsfds"}
     
 
 
-    bookAddAppointment(){
-        this.http.post(this.apoointmentsApi,this.appointmentArray).subscribe(result=>{
+    bookAddAppointment(appointment:Appointments){
+        // appointment.doctorId=
+
+        this.http.post(this.apoointmentsApi,appointment).subscribe(result=>{
             console.log(result);
             
         })

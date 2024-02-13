@@ -26,7 +26,6 @@ export class PatientRegistrationComponent {
   }
 
   resetForm(form: NgForm) {
-    this.Appointments.bookAddAppointment()
     form.reset()
   }
 }
