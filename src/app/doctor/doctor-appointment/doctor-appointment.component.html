@@ -2,9 +2,9 @@
 <div class="" style="margin-top: 100px;">
     <select #filter>
     <option value="All">All</option>
-    <option value="Approved">Approved</option>
+    <option value="Approve">Approve</option>
     <option value="Pending">Pending</option>
-    <option value="Rejected">Rejected</option>
+    <option value="Reject">Reject</option>
 </select>
 <button (click)="StatusFilter()">Apply</button>
     <table class="table table-hover">
@@ -102,12 +102,10 @@
                                                 <p class="mb-0">Appointment Description</p>
                                             </div>
                                             <div class="col-sm-9">
-<<<<<<< HEAD
+
                                                 <p class="text-muted mb-0">{{viewAppointments?.appointmentDescription}}
                                                 </p>
-=======
-                                                <p class="text-muted mb-0">{{viewAppointments?.appointmentDescription}}</p>
->>>>>>> 02a267f0237db5bd0ef753948550978f7710d011
+
                                             </div>
                                         </div>
                                     </div>

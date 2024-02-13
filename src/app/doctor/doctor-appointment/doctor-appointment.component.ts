@@ -69,12 +69,13 @@ export class DoctorAppointmentComponent {
     if (Doctordata) {
       let doctordata = JSON.parse(Doctordata)
       let doctorId = doctordata.id
+
       this.appointmentServices.getMyAppointments().subscribe(result => {
         this.appointments = result.filter(e => {
+          
           if (this.status?.nativeElement.value === "All") {
-            return this.appointmentServices.getMyAppointments()
+            return e.doctorId === doctorId
           }
-
           else {
             return e.doctorId === doctorId && e.appointmentStatus === this.status?.nativeElement.value
           }
@@ -88,11 +89,8 @@ export class DoctorAppointmentComponent {
     let status = this.appointment.nativeElement.value
     console.log(status);
     console.log(this.appointmentId);
-
-
     this.manageAppointmentService.actionAppointments(this.appointmentId, status).subscribe(res => {
       console.log(res);
-
       this.ngOnInit();
     })
 
