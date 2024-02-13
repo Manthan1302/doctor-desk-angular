@@ -59,6 +59,8 @@ export class PatientProfileComponent {
 
   updatePatient(data:PatientRegistration){
     this.service.updatePatientProfile(data).subscribe((result)=>{
+      console.log(result);
+      
       sessionStorage.setItem('loggedPatient',JSON.stringify(result))
       this.ngOnInit()
     })
