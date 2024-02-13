@@ -10,12 +10,6 @@ export class BookAppointmentService{
     constructor(private http:HttpClient){}
     apoointmentsApi:string="http://localhost:3000/allAppointments"
 
-    // appointmentArray:Appointments=
-    //     {doctorId:101,patientId:202,appointmentDate:"12-05-2020",appointmentTime:"9-12",
-    //     appointmentStatus:"Pending",appointmentDescription:"dsfds"}
-    
-
-
     bookAddAppointment(appointment:Appointments){
         // appointment.doctorId=
 

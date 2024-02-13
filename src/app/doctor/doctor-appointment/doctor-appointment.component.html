@@ -7,18 +7,98 @@
                 <th scope="col">Appointment Status</th>
                 <th scope="col">Appointment Time</th>
                 <th scope="col" colspan="2">Action</th>
-                
+
             </tr>
         </thead>
-        <tbody >
+        <tbody>
             <tr *ngFor="let data of appointments">
                 <td>{{data.id}}</td>
                 <td>{{data.appointmentDate}}</td>
                 <td>{{data.appointmentStatus}}</td>
                 <td>{{data.appointmentTime}}</td>
-                <td><i class="bi bi-eye" ></i></td>
+                <td><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="openmodalfunction(data)"></i></td>
                 <td><i class="bi bi-trash3-fill text-danger"></i></td>
             </tr>
         </tbody>
     </table>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <section style="background-color: #eee;">
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-3 d-flex">
+                                                <p class="mb-0">Patient Name</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{patientName}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Appointment Date</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0"></p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Appointment Time</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0"></p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Appointment Status</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Pending</option>
+                                                        <option value="1">Reject</option>
+                                                        <option value="2">Approve</option>
+                                                    </select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Appointment Description</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{viewAppointments?.appointmentDescription}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
