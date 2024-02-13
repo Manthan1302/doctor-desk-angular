@@ -130,22 +130,22 @@
                 <h2 class="mb-4">Appointment Booking Form</h2>
                 <div>
 
-                  <form>
+                  <form #appointmentBook="ngForm" (ngSubmit)="bookAppointmentFinal(appointmentBook.value)">
                     <div class="mb-3">
                       <label for="doctorName" class="form-label">Doctor Name</label>
-                      <input type="text" [(ngModel)]="drName" name="drName"  class="form-control" id="doctorName" required>
+                      <input type="text" [(ngModel)]="doctoeName" name="doctoeName"  class="form-control" id="doctorName" required disabled>
                     </div>
                     <div class="mb-3">
                       <label for="date" class="form-label">Date</label>
-                      <input type="date" class="form-control" id="date" name="date" required>
+                      <input type="date" class="form-control" id="date" ngModel name="appointmentDate" required>
                     </div>
                     <div class="mb-3">
                       <label for="time" class="form-label">Time</label>
-                      <input type="time" class="form-control" id="time" name="time" required>
+                      <input type="time" class="form-control" id="time" ngModel name="appointmentTime" required>
                     </div>
                     <div class="mb-3">
                       <label for="description" class="form-label">Description</label>
-                      <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                      <textarea class="form-control" id="description" ngModel name="appointmentDescription" rows="3" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>

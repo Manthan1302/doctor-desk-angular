@@ -1,4 +1,5 @@
 export class DoctorRegistration{
+    id:number|null=null
     doctorName:string|null=null
     doctorPhoneNumber:number|null=null
     doctorGender:string|null=null
@@ -9,5 +10,4 @@ export class DoctorRegistration{
     doctorRegistrationNumber:number|null=null
     doctorRegisterPassword:string|null=null
     doctorRegisterConfirmPassword:string|null=null
-    id:number | null = null
 }
