@@ -25,7 +25,6 @@ export class DoctorAppointmentComponent {
 
               ngOnInit(): void {
                 const Doctordata = sessionStorage.getItem('LogedDoctor')
-                console.log(Doctordata);
                 
                   
                   if(Doctordata){
