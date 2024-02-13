@@ -65,7 +65,7 @@
       "PatientState": "gujrat",
       "PatientPinCode": "382418",
       "PatientPassword": "000000",
-      "id": 1
+      "id": 0
     },
     {
       "PatientName": "keyur",
@@ -78,7 +78,7 @@
       "PatientState": "gujrat",
       "PatientPinCode": "382424",
       "PatientPassword": "123456",
-      "id": 2
+      "id": 1
     },
     {
       "PatientName": "meet",
@@ -99,6 +99,7 @@
       "appointmentDate": "2024-02-03",
       "appointmentTime": "00:44",
       "appointmentDescription": "sfdsfsdfd",
+      "appointmentStatus":"Pending",
       "doctorId": 1,
       "patientId": 0,
       "id": 1
