@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { DoctorRegisterService } from 'src/app/doctor/DoctorServices/DoctorRegister.service';
 import { DoctorRegistration } from 'src/app/doctor/doctorModel/DoctorRegistrationModel';
 import { PatientRegistration } from '../PatientModel/PatientRegistartionModel';
+import { Appointments } from 'src/app/sharedModel/Appointment';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +42,11 @@ export class CommonServiceService {
 
   getBookingData(){
     return this.bookingData;
+  }
+
+
+  getPatientAppointment(){
+    const path=`${this.url}/allAppointments`
+    return this.httpClient.get<Appointments[]>(path)
   }
 }

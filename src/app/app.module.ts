@@ -22,6 +22,7 @@ import { HomeComponent } from './doctor/home/home.component';
 import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
+import { PrescriptionComponent } from './doctor/prescription/prescription.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.
     AllDoctorsComponent,
     PatientProfileComponent,
     MyAppointmentComponent,
+    PrescriptionComponent,
   ],
   imports: [
     BrowserModule,

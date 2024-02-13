@@ -10,27 +10,27 @@ import { GetAppointments } from 'src/app/sharedServices/getAppointments.service'
 })
 export class DoctorAppointmentComponent {
 
-  appointments:Appointments[]=[]
-  
-  constructor(private appointmentServices:GetAppointments,
-              private http :HttpClient){}
+  appointments: Appointments[] = []
+
+  constructor(private appointmentServices: GetAppointments,
+    private http: HttpClient) { }
 
 
-              ngOnInit(): void {
-                const Doctordata = sessionStorage.getItem('LogedDoctor')
-                console.log(Doctordata);
-                
-                  
-                  if(Doctordata){
-                    let doctordata = JSON.parse(Doctordata)
-                    let doctorId=doctordata.id
-                this.appointmentServices.getMyAppointments(doctorId).subscribe(result=>{
-                    this.appointments =result.filter(e=>{
-                      return e.doctorId===doctorId
-                    })
-                })
-              }
+  ngOnInit(): void {
+    const Doctordata = sessionStorage.getItem('LogedDoctor')
+    console.log(Doctordata);
 
 
-}
+    if (Doctordata) {
+      let doctordata = JSON.parse(Doctordata)
+      let doctorId = doctordata.id
+      this.appointmentServices.getMyAppointments(doctorId).subscribe(result => {
+        this.appointments = result.filter(e => {
+          return e.doctorId === doctorId
+        })
+      })
+    }
+
+
+  }
 }

@@ -3,16 +3,16 @@ import { Injectable } from "@angular/core";
 import { Appointments } from 'src/app/sharedModel/Appointment';
 
 @Injectable({
-    providedIn:'root'
+    providedIn: 'root'
 })
-export class GetAppointments{
+export class GetAppointments {
 
-    constructor(private http :HttpClient){}
+    constructor(private http: HttpClient) { }
 
-    appointmentsApi:string='http://localhost:3000/allAppointments'
+    appointmentsApi: string = 'http://localhost:3000/allAppointments'
 
-    getMyAppointments(doctorId:number){
-       return this.http.get<Appointments[]>(this.appointmentsApi)
+    getMyAppointments(doctorId: number) {
+        return this.http.get<Appointments[]>(this.appointmentsApi)
 
     }
 
