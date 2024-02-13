@@ -24,7 +24,7 @@ export class DoctorAppointmentComponent {
                   if(Doctordata){
                     let doctordata = JSON.parse(Doctordata)
                     let doctorId=doctordata.id
-                this.appointmentServices.getMyAppointments(doctorId).subscribe(result=>{
+                this.appointmentServices.getMyAppointments().subscribe(result=>{
                     this.appointments =result.filter(e=>{
                       return e.doctorId===doctorId
                     })

@@ -11,7 +11,7 @@ export class GetAppointments{
 
     appointmentsApi:string='http://localhost:3000/allAppointments'
 
-    getMyAppointments(doctorId:number){
+    getMyAppointments(){
        return this.http.get<Appointments[]>(this.appointmentsApi)
 
     }
