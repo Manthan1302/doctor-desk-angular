@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Appointments } from 'src/app/sharedModel/Appointment';
 import { GetAppointments } from 'src/app/sharedServices/getAppointments.service';
+import { ManageAppointmentService } from './../../sharedServices/manageAppointment.service';
 
 @Component({
   selector: 'app-doctor-appointment',
@@ -11,8 +12,11 @@ import { GetAppointments } from 'src/app/sharedServices/getAppointments.service'
 export class DoctorAppointmentComponent {
 
   appointments:Appointments[]=[]
+  viewAppointments!:Appointments
+  patientName:string|null=null
   
   constructor(private appointmentServices:GetAppointments,
+              private manageAppointmentService: ManageAppointmentService,
               private http :HttpClient){}
 
 
@@ -33,4 +37,24 @@ export class DoctorAppointmentComponent {
 
 
 }
+
+    openmodalfunction(data:Appointments){
+      this.viewAppointments=data
+      this.manageAppointmentService.getPatients().subscribe(result=>{
+
+        result.filter(res=>{
+          if(res.id===data.patientId){
+            this.patientName=res.PatientName
+          }
+        })
+      })
+
+
+
+      
+
+
+  }
+
+
 }
