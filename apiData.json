@@ -99,7 +99,7 @@
       "appointmentDate": "2024-02-03",
       "appointmentTime": "00:44",
       "appointmentDescription": "sfdsfsdfd",
-      "appointmentStatus": "Approve",
+      "appointmentStatus": "Reject",
       "doctorId": 1,
       "patientId": 0,
       "id": 1
