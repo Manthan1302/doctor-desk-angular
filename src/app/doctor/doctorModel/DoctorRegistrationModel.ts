@@ -9,4 +9,5 @@ export class DoctorRegistration{
     doctorRegistrationNumber:number|null=null
     doctorRegisterPassword:string|null=null
     doctorRegisterConfirmPassword:string|null=null
+    id:number | null = null
 }

@@ -17,6 +17,7 @@ import { PatientProfileComponent } from './patient/patient-profile/patient-profi
 import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
 import { HomeComponent } from './doctor/home/home.component';
 import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-appointment.component';
+import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: "patientDashboard", component: PatientDashboardComponent ,children:[
     {path:"PatientProfile",component:PatientProfileComponent},
     {path:"AllDoctors",component:AllDoctorsComponent},
+    {path:"myAppointment",component:MyAppointmentComponent},
 
   ]},
 

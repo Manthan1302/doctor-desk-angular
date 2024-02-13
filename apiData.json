@@ -14,7 +14,7 @@
       "doctorRegistrationNumber": 1234565432
     },
     {
-      "doctorName": "Jeel patel",
+      "doctorName": "Jeel",
       "doctorEmail": "manthan@gmail.com",
       "doctorPhoneNumber": 7201914901,
       "doctorClinicName": "manthan clinic",
@@ -32,7 +32,7 @@
       "PatientName": "Arjun",
       "PatientEmail": "manthan@gmail.com",
       "PatientPhoneNumber": 6352896341,
-      "PatientDateOfBirth": "13-07-2002",
+      "PatientDateOfBirth": "2002-09-03",
       "PatientAddress": "isanpur",
       "PatientCity": "Ahmadabad",
       "PatientState": "Gujarat",
