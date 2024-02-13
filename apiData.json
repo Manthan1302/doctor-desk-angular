@@ -99,7 +99,7 @@
       "appointmentDate": "2024-02-03",
       "appointmentTime": "00:44",
       "appointmentDescription": "sfdsfsdfd",
-      "appointmentStatus": "Pending",
+      "appointmentStatus": "Reject",
       "doctorId": 1,
       "patientId": 0,
       "id": 1
@@ -108,7 +108,7 @@
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "sdfsdfsfsfsdf",
-      "appointmentStatus": "Approved",
+      "appointmentStatus": "Approve",
       "doctorId": 1,
       "patientId": 0,
       "id": 2
@@ -117,7 +117,7 @@
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Manthan",
-      "appointmentStatus": "Rejected",
+      "appointmentStatus": "Pending",
       "doctorId": 1,
       "patientId": 0,
       "id": 2

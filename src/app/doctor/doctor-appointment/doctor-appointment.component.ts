@@ -11,15 +11,23 @@ import { ManageAppointmentService } from './../../sharedServices/manageAppointme
 })
 export class DoctorAppointmentComponent {
 
+
   @ViewChild('filter') status: ElementRef | null = null
+  @ViewChild('appointmentStatus') appointment!: ElementRef
 
   appointments: Appointments[] = []
   viewAppointments!: Appointments
   patientName: string | null = null
+  appointmentId: number | null = null
 
   constructor(private appointmentServices: GetAppointments,
     private manageAppointmentService: ManageAppointmentService,
     private http: HttpClient) { }
+
+
+
+
+
 
 
   ngOnInit(): void {
@@ -38,7 +46,9 @@ export class DoctorAppointmentComponent {
     }
   }
 
+
   openmodalfunction(data: Appointments) {
+    this.appointmentId = data.id
     this.viewAppointments = data
     this.manageAppointmentService.getPatients().subscribe(result => {
 
@@ -70,8 +80,23 @@ export class DoctorAppointmentComponent {
           }
         })
       })
-    }
 
+    }
   }
 
+  actionAppointment() {
+    let status = this.appointment.nativeElement.value
+    console.log(status);
+    console.log(this.appointmentId);
+
+
+    this.manageAppointmentService.actionAppointments(this.appointmentId, status).subscribe(res => {
+      console.log(res);
+
+      this.ngOnInit();
+    })
+
+
+
+  }
 }
