@@ -21,6 +21,7 @@ export class AllDoctorsComponent {
     //Add 'implements OnInit' to the class.
     this.service.getAllDoctors().subscribe((data)=>{
       this.doctors=data
+    
     })  
   }
   openmodal(data:DoctorRegistration){

@@ -31,6 +31,8 @@ export class RegistrationComponent {
   registerDoctor(form: DoctorRegistration) {
     this.doctorRegisterService.RegisterDoctor(form).subscribe(result => {
       if (result) {
+        console.log(result);
+        
         return alert("Data Added")
       } else {
         return alert("something Went Wrong")

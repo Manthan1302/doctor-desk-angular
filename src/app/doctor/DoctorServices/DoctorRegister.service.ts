@@ -10,13 +10,7 @@ export class DoctorRegisterService{
 
     RegistrationApi:string='http://localhost:3000/allDoctors'
     constructor(private http: HttpClient) {
-        // this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe(res=>{
-        //     console.log(res.length);
-        //     this.length=res.length
-        //     console.log(this.length);
-            
-            
-        // })
+       
     }
     
     
@@ -28,11 +22,18 @@ export class DoctorRegisterService{
     
     // doctor Register Api
     RegisterDoctor(RegisterDetails:DoctorRegistration){
+        // this.http.get<DoctorRegistration[]>(this.RegistrationApi).subscribe(res=>{
+        //     console.log(res.length);
+        //     this.length=res.length
+        //     console.log(this.length);
+            
+            
+        // })
         // RegisterDetails.doctorId=this.length+1
     
         // this.docotrsArray.push(RegisterDetails)
         // console.log(this.length);
-        
+        // RegisterDetails.doctorId=
         return this.http.post(this.RegistrationApi,RegisterDetails)
     }
 

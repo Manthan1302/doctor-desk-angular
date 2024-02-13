@@ -1,4 +1,5 @@
 export class DoctorRegistration{
+    id:number|null=null
     doctorName:string|null=null
     doctorPhoneNumber:number|null=null
     doctorGender:string|null=null
