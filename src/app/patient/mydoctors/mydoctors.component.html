@@ -1,0 +1,169 @@
+<body style="background-color: #eee;">
+
+    <div class="container mt-5 mb-5">
+        <div class="row g-2">
+            <div class="col-md-3" *ngFor="let item of myDoctors">
+                <div class="card p-2 py-3 text-center">
+                    <div class="img mb-2">
+                        <img src="../../../assets/images/doctor.jpg" width="100" class="rounded-circle">
+                    </div>
+                    <h5 class="mb-0">{{item.doctorName}} {{item.id}}</h5>
+                    <small>{{item.doctorSpecialization}}</small>
+                    <div class="mt-4 apointment">
+                        <button class="btn btn-info text-uppercase" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" (click)="openModel(item)"><i
+                                class="bi bi-eye text-info"></i></button>
+
+                        <button class="btn btn-success text-uppercase" data-bs-toggle="modal"
+                            data-bs-target="#bookappointmentmodal" (click)="bookAppointmentFormModel(item)">Book
+                            Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <section style="background-color: #eee;">
+                        <div class="container py-5">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card mb-4">
+                                        <div class="card-body text-center">
+                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+                                                alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                                            <h5 class="my-3">{{modelDoctor?.doctorName}}</h5>
+                                            <p class="text-muted mb-4">{{modelDoctor?.doctorSpecialization}}</p>
+                                            <div class="d-flex justify-content-center mb-2">
+                                                <button type="button"
+                                                    class="btn btn-outline-primary ms-1">{{modelDoctor?.doctorName}}</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Full Name</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">{{modelDoctor?.doctorName}}</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Email</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">{{modelDoctor?.doctorEmail}}</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Doctor Registartion Number</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">{{modelDoctor?.doctorRegistrationNumber}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Mobile</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">{{modelDoctor?.doctorPhoneNumber}}</p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <p class="mb-0">Address</p>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <p class="text-muted mb-0">{{modelDoctor?.doctorClinicAddress}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="bookappointmentmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="container mt-5">
+                            <h2 class="mb-4">Appointment Booking Form</h2>
+                            <div>
+
+                                <form #appointmentBook="ngForm"
+                                    (ngSubmit)="bookAppointment(appointmentBook.value)">
+                                    <div class="mb-3">
+                                        <label for="doctorName" class="form-label">Doctor Name</label>
+                                        <input type="text" [(ngModel)]="doctorName" name="doctoeName"
+                                            class="form-control" id="doctorName" required disabled />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Date</label>
+                                        <input type="date" class="form-control" id="date" ngModel name="appointmentDate"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="time" class="form-label">Time</label>
+                                        <input type="time" class="form-control" id="time" ngModel name="appointmentTime"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="description" ngModel
+                                            name="appointmentDescription" rows="3" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonServiceService } from '../PatientService/common-service.service';
 import { Appointments } from 'src/app/sharedModel/Appointment';
 import { PatientRegistration } from '../PatientModel/PatientRegistartionModel';
@@ -11,6 +11,8 @@ import { PatientRegistration } from '../PatientModel/PatientRegistartionModel';
 export class MyAppointmentComponent {
   myAppointments: Appointments[] = []
   id: PatientRegistration | null = null;
+  @ViewChild('filter') status: ElementRef | null = null
+  @ViewChild('appointmentStatus') appointment!: ElementRef
   constructor(private service: CommonServiceService) { }
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -26,5 +28,30 @@ export class MyAppointmentComponent {
         return e.patientId === this.id?.id
       })
     })
+  }
+
+  StatusFilter() {
+    console.log(this.status?.nativeElement.value);
+
+    const patientData = sessionStorage.getItem('loggedPatient')
+    console.log(patientData);
+
+    if (patientData) {
+      let data = JSON.parse(patientData)
+      let patientId = data.id
+
+      this.service.getPatientAppointment().subscribe(result => {
+        this.myAppointments= result.filter(e => {
+          
+          if (this.status?.nativeElement.value === "All") {
+            return e.patientId === patientId
+          }
+          else {
+            return e.patientId === patientId && e.appointmentStatus === this.status?.nativeElement.value
+          }
+        })
+      })
+
+    }
   }
 }
