@@ -1,154 +1,224 @@
+<div class="row" style="margin-top: 100px">
+  <div class="col-md-3">
+    <select #filter class="form-select">
+      <option value="All">All</option>
+      <option value="Approve">Approve</option>
+      <option value="Pending">Pending</option>
 
+      <option value="Reject">Reject</option>
+      <option value="Complete">Complete</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <button (click)="StatusFilter()" class="btn btn-primary">Apply</button>
+  </div>
 
-<div class="" style="margin-top: 100px;">
-    <select #filter>
-    <option value="All">All</option>
-    <option value="Approve">Approve</option>
-    <option value="Pending">Pending</option>
-    <option value="Reject">Reject</option>
-    <option value="Complete">Complete</option>
-
-</select>
-<button (click)="StatusFilter()">Apply</button>
-
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">Appointment ID</th>
-                <th scope="col">Appointment Date</th>
-                <th scope="col">Appointment Status </th>
-                <th scope="col">Appointment Time</th>
-                <th scope="col" colspan="2">Action</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let data of appointments">
-                <td>{{data.id}}</td>
-                <td>{{data.appointmentDate}}</td>
-                <td>{{data.appointmentStatus}} 
-                    <i class="bi bi-circle-fill text-success" *ngIf="data.appointmentStatus === 'Approve'"></i>
-                    <i class="bi bi-circle-fill text-danger" *ngIf="data.appointmentStatus === 'Reject'"></i>
-                    <i class="bi bi-circle-fill text-warning" *ngIf="data.appointmentStatus === 'Pending'" >
-                    </i>
-                </td>
-                <td>{{data.appointmentTime}}</td>
-                <td><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        (click)="openmodalfunction(data)"></i></td>
-                <td><i class="bi bi-trash3-fill text-danger"></i></td>
-                <td *ngIf="data.appointmentStatus === 'Approve'" data-bs-toggle="modal" data-bs-target="#priscriptionmodel" (click)="openpriscriptionmodal(data)"
-                ><i class="bi bi-journal-check text-success"></i></td>
-            </tr>
-        </tbody>
-    </table>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Appointment ID</th>
+        <th scope="col">Appointment Date</th>
+        <th scope="col">Appointment Status</th>
+        <th scope="col">Appointment Time</th>
+        <th scope="col" colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of appointments">
+        <td>{{ data.id }}</td>
+        <td>{{ data.appointmentDate }}</td>
+        <td>
+          {{ data.appointmentStatus }}
+          <i
+            class="bi bi-circle-fill text-success"
+            *ngIf="data.appointmentStatus === 'Approve'"
+          ></i>
+          <i
+            class="bi bi-circle-fill text-danger"
+            *ngIf="data.appointmentStatus === 'Reject'"
+          ></i>
+          <i
+            class="bi bi-circle-fill text-warning"
+            *ngIf="data.appointmentStatus === 'Pending'"
+          >
+          </i>
+        </td>
+        <td>{{ data.appointmentTime }}</td>
+        <td>
+          <i
+            class="bi bi-eye"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="openmodalfunction(data)"
+          ></i>
+        </td>
+        <td><i class="bi bi-trash3-fill text-danger"></i></td>
+        <td
+          *ngIf="data.appointmentStatus === 'Approve'"
+          data-bs-toggle="modal"
+          data-bs-target="#priscriptionmodel"
+          (click)="openpriscriptionmodal(data)"
+        >
+          <i class="bi bi-journal-check text-success"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <form #appointmentManageForm="ngForm" (ngSubmit)="actionAppointment()">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <section style="background-color: #eee;">
-                    <div class="container py-5">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="card mb-4">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-sm-3 d-flex">
-                                                <p class="mb-0">Patient Name</p>
-                                            </div>
-                                            <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{{patientName}}</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Appointment Date</p>
-                                            </div>
-                                            <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{{viewAppointments?.appointmentDate}}</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Appointment Time</p>
-                                            </div>
-                                            <div class="col-sm-9">
-                                                <p class="text-muted mb-0">{{viewAppointments?.appointmentTime}}</p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Appointment Status</p>
-                                            </div>
-                                            <div class="col-sm-9">
-                                                <p class="text-muted mb-0">
-
-                                                    <select class="form-select" ngModel name="appointmentStatus" #appointmentStatus aria-label="Default select example">
-                                                        <option selected disabled>{{viewAppointments?.appointmentStatus}}</option>
-                                                        <option value="Pending">Pending</option>
-                                                        <option value="Reject">Reject</option>
-                                                        <option value="Approve">Approve</option>
-
-                                                </select>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <p class="mb-0">Appointment Description</p>
-                                            </div>
-                                            <div class="col-sm-9">
-
-                                                <p class="text-muted mb-0">{{viewAppointments?.appointmentDescription}}
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary"  data-bs-dismiss="modal">Save changes</button>
-            </div>
-        </div>
-        </form>
-    </div>
-</div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="priscriptionmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
+<!-- <div *ngIf="appointments.length===0" id="errorMessageModel"  data-bs-toggle="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Priscription</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          </button>
         </div>
         <div class="modal-body">
-        <app-priscriptionform [appointmentData]="appointmentData" ></app-priscriptionform>
+          <p>You don't have any appointments</p>
+        </div>
+       
+      </div>
+    </div>
+  </div> -->
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <form #appointmentManageForm="ngForm" (ngSubmit)="actionAppointment()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <section style="background-color: #eee">
+            <div class="container py-5">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-3 d-flex">
+                          <p class="mb-0">Patient Name</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0">{{ patientName }}</p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0">Appointment Date</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0">
+                            {{ viewAppointments?.appointmentDate }}
+                          </p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0">Appointment Time</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0">
+                            {{ viewAppointments?.appointmentTime }}
+                          </p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0">Appointment Status</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0">
+                            <select
+                              class="form-select"
+                              ngModel
+                              name="appointmentStatus"
+                              #appointmentStatus
+                              aria-label="Default select example"
+                            >
+                              <option selected disabled>
+                                {{ viewAppointments?.appointmentStatus }}
+                              </option>
+                              <option value="Pending">Pending</option>
+                              <option value="Reject">Reject</option>
+                              <option value="Approve">Approve</option>
+                            </select>
+                          </p>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0">Appointment Description</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p class="text-muted mb-0">
+                            {{ viewAppointments?.appointmentDescription }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+            Save changes
+          </button>
         </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="priscriptionmodel"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Priscription</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-priscriptionform
+          [appointmentData]="appointmentData"
+        ></app-priscriptionform>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
       </div>
     </div>
   </div>
-
-
-
-
+</div>

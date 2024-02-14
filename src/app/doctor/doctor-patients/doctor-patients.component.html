@@ -1,0 +1,104 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Gender </th>
+            <th scope="col">State</th>
+            <th scope="col" colspan="2">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of myPatients">
+            <td>{{patient.PatientName}}</td>
+            <td>{{patient.PatientPhoneNumber}}</td>
+            <td>{{patient.PatientGender}} </td>
+            <td>{{patient.PatientState}} </td>
+           
+            <td><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="openModelPatientDetails(patient)"> </i></td>
+            <td><i class="bi bi-trash3-fill text-danger"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <section style="background-color: #eee;">
+                    <div class="container py-5">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-3 d-flex">
+                                                <p class="mb-0">Name</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientName}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Email</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientEmail}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Address</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientAddress}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">City</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientCity}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Pincode</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientPinCode}}</p>
+                                            </div>
+                                        </div>
+                                        <hr> 
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <p class="mb-0">Date of Birth</p>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p class="text-muted mb-0">{{myPatientDetail?.PatientDateOfBirth}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          
+        </div>
+    </div>
+</div>

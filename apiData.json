@@ -81,6 +81,19 @@
       "id": 1
     },
     {
+      "PatientName": "Mayur",
+      "PatientEmail": "keyur@gmail.com",
+      "PatientPhoneNumber": 9510287327,
+      "PatientDateOfBirth": "2002-03-09",
+      "PatientGender": "Male",
+      "PatientAddress": "vastral",
+      "PatientCity": "ahmedabad",
+      "PatientState": "gujrat",
+      "PatientPinCode": "382424",
+      "PatientPassword": "123456",
+      "id": 2
+    },
+    {
       "PatientName": "meet",
       "PatientEmail": "meet@gmail.com",
       "PatientPhoneNumber": 6352896341,
@@ -99,28 +112,38 @@
       "appointmentDate": "2024-02-03",
       "appointmentTime": "00:44",
       "appointmentDescription": "sfdsfsdfd",
-      "appointmentStatus": "Reject",
-      "doctorId": 2,
-      "patientId": 0,
+      "appointmentStatus": "Approve",
+      "doctorId": 1,
       "id": 1
     },
     {
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "sdfsdfsfsfsdf",
-      "appointmentStatus": "Approve",
+      "appointmentStatus": "Complete",
       "doctorId": 2,
       "patientId": 0,
       "id": 2
     },
+    
     {
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Manthan",
       "appointmentStatus": "Approve",
       "doctorId": 2,
-      "patientId": 1,
+      "patientId": 2,
       "id": 3
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "00:44",
+      "appointmentDescription": "Manthan",
+      "appointmentStatus": "Complete",
+      "doctorId": 2,
+      "patientId": 2,
+      "id": 3
+
     },
     {
       "appointmentDate": "2024-02-04",
@@ -166,6 +189,7 @@
       "appointmentStatus": "Pending",
       "patientId": 0,
       "id": 8
+
     }
   ]
 }

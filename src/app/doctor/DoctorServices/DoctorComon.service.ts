@@ -19,6 +19,14 @@ export class DoctorComonService{
         return this.http.get(this.Doctordataapi)
     }
 
+    getSessionStorage(){
+        let dataDoctor=sessionStorage.getItem('LogedDoctor')
+        if(dataDoctor){
+            let did=JSON.parse(dataDoctor)
+            return did.id
+        }
+    }
+
 
     updateDoctor(data:any){
         console.log(data);

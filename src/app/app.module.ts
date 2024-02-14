@@ -22,8 +22,14 @@ import { HomeComponent } from './doctor/home/home.component';
 import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
+
+
+import { DoctorPatientsComponent } from './doctor/doctor-patients/doctor-patients.component';
+import { CommonModule } from '@angular/common';
+
 import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
 import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
+
 
 
 
@@ -46,8 +52,10 @@ import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
     AllDoctorsComponent,
     PatientProfileComponent,
     MyAppointmentComponent,
+    DoctorPatientsComponent,
     PriscriptionformComponent,
     MydoctorsComponent,
+
 
   ],
   imports: [
@@ -55,7 +63,9 @@ import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+
     ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
