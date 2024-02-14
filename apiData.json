@@ -114,7 +114,6 @@
       "appointmentDescription": "sfdsfsdfd",
       "appointmentStatus": "Approve",
       "doctorId": 1,
-      "patientId": 0,
       "id": 1
     },
     {
@@ -144,6 +143,53 @@
       "doctorId": 2,
       "patientId": 2,
       "id": 3
+
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "00:44",
+      "appointmentDescription": "Arjun",
+      "appointmentStatus": "Complete",
+      "doctorId": 2,
+      "patientId": 0,
+      "id": 4
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "00:44",
+      "appointmentDescription": "Arjun",
+      "appointmentStatus": "Complete",
+      "doctorId": 3,
+      "patientId": 0,
+      "id": 5
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "00:48",
+      "appointmentDescription": "Manthan",
+      "appointmentStatus": "Complete",
+      "doctorId": 2,
+      "patientId": 1,
+      "id": 6
+    },
+    {
+      "appointmentDate": "2024-02-04",
+      "appointmentTime": "00:44",
+      "appointmentDescription": "Arjun",
+      "appointmentStatus": "Complete",
+      "doctorId": 2,
+      "patientId": 0,
+      "id": 7
+    },
+    {
+      "appointmentDate": "2024-02-23",
+      "appointmentTime": "16:07",
+      "appointmentDescription": "asdfasdsdfsdfsdf",
+      "doctorId": 2,
+      "appointmentStatus": "Pending",
+      "patientId": 0,
+      "id": 8
+
     }
   ]
 }

@@ -49,4 +49,5 @@ export class CommonServiceService {
     const path=`${this.url}/allAppointments`
     return this.httpClient.get<Appointments[]>(path)
   }
+
 }
