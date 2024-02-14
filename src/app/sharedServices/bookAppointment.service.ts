@@ -11,7 +11,6 @@ export class BookAppointmentService{
     apoointmentsApi:string="http://localhost:3000/allAppointments"
 
     bookAddAppointment(appointment:Appointments){
-        // appointment.doctorId=
 
         this.http.post(this.apoointmentsApi,appointment).subscribe(result=>{
             console.log(result);

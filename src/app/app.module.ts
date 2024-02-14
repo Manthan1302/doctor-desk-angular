@@ -23,6 +23,8 @@ import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
 import { PrescriptionComponent } from './doctor/prescription/prescription.component';
+import { DoctorPatientsComponent } from './doctor/doctor-patients/doctor-patients.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -45,12 +47,14 @@ import { PrescriptionComponent } from './doctor/prescription/prescription.compon
     PatientProfileComponent,
     MyAppointmentComponent,
     PrescriptionComponent,
+    DoctorPatientsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

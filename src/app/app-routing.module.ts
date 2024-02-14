@@ -18,6 +18,7 @@ import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component
 import { HomeComponent } from './doctor/home/home.component';
 import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-appointment.component';
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
+import { DoctorPatientsComponent } from './doctor/doctor-patients/doctor-patients.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: "", component: HomeComponent },
       { path: "appointment", component:DoctorAppointmentComponent },
       { path: "profile", component: DoctorProfileComponent },
+      { path: "doctorPatients", component: DoctorPatientsComponent },
     ]
   },
   // patient routes

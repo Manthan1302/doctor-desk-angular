@@ -16,6 +16,7 @@ export class ManageAppointmentService{
     patientApi:string='http://localhost:3000/allPatient'
 
 
+
     getPatients(){
         return this.http.get<PatientRegistration[]>(this.patientApi)
     }
@@ -26,9 +27,10 @@ export class ManageAppointmentService{
         
 
          return this.http.patch<Appointments[]>(url,{appointmentStatus:status})
-         
+    }
 
-
+    getAppointmentDoctor(){
+       return  this.http.get<Appointments[]>(this.appointmentsApi)
 
     }
 }
