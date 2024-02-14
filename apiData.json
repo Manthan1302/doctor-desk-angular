@@ -126,7 +126,7 @@
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Arjun",
-      "appointmentStatus": "Complete",
+      "appointmentStatus": "Approve",
       "doctorId": 2,
       "patientId": 0,
       "id": 4
