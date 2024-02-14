@@ -10,8 +10,8 @@
                     <h5 class="mb-0">{{item.doctorName}} {{item.id}}</h5>
                     <small>{{item.doctorSpecialization}}</small>
                     <div class="mt-4 apointment">
-                      <button class="btn btn-info text-uppercase"><i class="bi bi-eye text-info" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" (click)="openmodal(item)"></i></button>
+                      <button class="btn btn-info text-uppercase" (click)="openmodal(item)" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"><i class="bi bi-eye text-info"  ></i></button>
                         
             <button class="btn btn-success text-uppercase" data-bs-toggle="modal" data-bs-target="#bookappointmentmodal"
             (click)="bookappointment(item)">Book Appointment</button>
@@ -133,7 +133,7 @@
                   <form #appointmentBook="ngForm" (ngSubmit)="bookAppointmentFinal(appointmentBook.value)">
                     <div class="mb-3">
                       <label for="doctorName" class="form-label">Doctor Name</label>
-                      <input type="text" [(ngModel)]="doctoeName" name="doctoeName"  class="form-control" id="doctorName" required disabled>
+                      <input type="text" [(ngModel)]="doctoeName" name="doctoeName"  class="form-control" id="doctorName" required disabled />
                     </div>
                     <div class="mb-3">
                       <label for="date" class="form-label">Date</label>

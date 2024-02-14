@@ -1,4 +1,17 @@
-<div class="" style="margin-top: 100px;">
+<div class="row" style="margin-top: 100px;">
+    <div class="col-md-3">
+        <select #filter class="form-select">
+            <option value="All">All</option>
+            <option value="Approve">Approve</option>
+            <option value="Pending">Pending</option>
+            <option value="Reject">Reject</option>
+            <option value="Complete">Complete</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <button (click)="StatusFilter()" class="btn btn-primary">Apply</button>
+    </div>
+
     <table class="table table-hover">
         <thead>
             <tr>
@@ -7,16 +20,16 @@
                 <th scope="col">Appointment Status</th>
                 <th scope="col">Appointment Time</th>
                 <th scope="col" colspan="2">Action</th>
-                
+
             </tr>
         </thead>
-        <tbody >
+        <tbody>
             <tr *ngFor="let item of myAppointments">
                 <td>{{item.id}}</td>
                 <td>{{item.appointmentDate}}</td>
                 <td>{{item.appointmentStatus}}</td>
                 <td>{{item.appointmentTime}}</td>
-                <td><i class="bi bi-eye" ></i></td>
+                <td><i class="bi bi-eye"></i></td>
                 <td><i class="bi bi-trash3-fill text-danger"></i></td>
             </tr>
         </tbody>
