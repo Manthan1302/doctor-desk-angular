@@ -9,7 +9,7 @@ import { AskingPageComponent } from './asking-page/asking-page.component';
 import { RegistrationComponent } from './doctor/registration/registration.component';
 import { LoginComponent } from './doctor/login/login.component';
 import {HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashbordComponent } from './doctor/dashbord/dashbord.component';
 import { DoctorViewapointmentComponent } from './doctor/doctor-viewapointment/doctor-viewapointment.component';
 import { PatientRegistrationComponent } from './patient/patient-registration/patient-registration.component';
@@ -22,7 +22,7 @@ import { HomeComponent } from './doctor/home/home.component';
 import { AllDoctorsComponent } from './patient/all-doctors/all-doctors.component';
 import { PatientProfileComponent } from './patient/patient-profile/patient-profile.component';
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
-import { PrescriptionComponent } from './doctor/prescription/prescription.component';
+import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
 
 
 @NgModule({
@@ -44,13 +44,14 @@ import { PrescriptionComponent } from './doctor/prescription/prescription.compon
     AllDoctorsComponent,
     PatientProfileComponent,
     MyAppointmentComponent,
-    PrescriptionComponent,
+    PriscriptionformComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

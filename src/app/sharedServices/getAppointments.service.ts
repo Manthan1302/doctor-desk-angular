@@ -14,8 +14,6 @@ export class GetAppointments {
 
     getMyAppointments(){
        return this.http.get<Appointments[]>(this.appointmentsApi)
-
-
     }
 
 }

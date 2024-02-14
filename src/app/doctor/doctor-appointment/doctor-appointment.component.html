@@ -1,12 +1,18 @@
 
-<div class="" style="margin-top: 100px;">
-    <select #filter>
-    <option value="All">All</option>
-    <option value="Approve">Approve</option>
-    <option value="Pending">Pending</option>
-    <option value="Reject">Reject</option>
-</select>
-<button (click)="StatusFilter()">Apply</button>
+<div class="row" style="margin-top: 100px;">
+    <div class="col-md-6"> <!-- Adjust the column width as per your layout requirements -->
+        <select class="form-select" #filter>
+            <option value="All">All</option>
+            <option value="Approve">Approve</option>
+            <option value="Pending">Pending</option>
+            <option value="Reject">Reject</option>
+        </select>
+    </div>
+    <div class="col-md-6"> <!-- Adjust the column width as per your layout requirements -->
+        <button class="btn btn-primary" (click)="StatusFilter()">Apply</button>
+    </div>
+
+
     <table class="table table-hover">
         <thead>
             <tr>
@@ -32,6 +38,8 @@
                 <td><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         (click)="openmodalfunction(data)"></i></td>
                 <td><i class="bi bi-trash3-fill text-danger"></i></td>
+                <td *ngIf="data.appointmentStatus === 'Approve'" data-bs-toggle="modal" data-bs-target="#priscriptionmodel" (click)="openpriscriptionmodal(data)"
+                ><i class="bi bi-journal-check text-success"></i></td>
             </tr>
         </tbody>
     </table>
@@ -123,3 +131,26 @@
         </form>
     </div>
 </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="priscriptionmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Priscription</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <app-priscriptionform [appointmentData]="appointmentData" ></app-priscriptionform>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+

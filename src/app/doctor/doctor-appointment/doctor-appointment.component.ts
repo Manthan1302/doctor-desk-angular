@@ -19,6 +19,7 @@ export class DoctorAppointmentComponent {
   viewAppointments!: Appointments
   patientName: string | null = null
   appointmentId: number | null = null
+  appointmentData!: Appointments;
 
   constructor(private appointmentServices: GetAppointments,
     private manageAppointmentService: ManageAppointmentService,
@@ -93,8 +94,10 @@ export class DoctorAppointmentComponent {
       console.log(res);
       this.ngOnInit();
     })
+  }
 
-
-
+  openpriscriptionmodal(data:Appointments)
+  {
+    this.appointmentData = data;
   }
 }

@@ -51,5 +51,9 @@ export class PatientLoginService {
     sessionStorage.removeItem('loggedPatient');
     this.router.navigate(['/patientLogin'])
   }
+
+  getallpatient(){
+    return this.httpClient.get<PatientRegistration[]>(this.getPatient)
+  }
 }
 
