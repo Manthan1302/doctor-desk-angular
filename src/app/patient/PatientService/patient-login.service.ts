@@ -39,6 +39,7 @@ export class PatientLoginService {
 
       if (this.userMatch) {
         sessionStorage.setItem('loggedPatient',JSON.stringify(this.loggedPatient))
+        sessionStorage.setItem('AuthKeyPatient',JSON.stringify("PatientAuthKey"))
         this.router.navigate(['/patientDashboard'])
       }
       else {

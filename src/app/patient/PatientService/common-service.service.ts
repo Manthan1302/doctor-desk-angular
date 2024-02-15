@@ -45,6 +45,10 @@ export class CommonServiceService {
   }
 
 
+  getSessionAuthKey(){
+    return sessionStorage.getItem('AuthKeyPatient')
+  }
+
   getPatientAppointment(){
     const path=`${this.url}/allAppointments`
     return this.httpClient.get<Appointments[]>(path)

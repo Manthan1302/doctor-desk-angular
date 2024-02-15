@@ -27,6 +27,10 @@ export class DoctorComonService{
         }
     }
 
+    getAuthKey(){
+        return sessionStorage.getItem('AuthKeyDoctor')
+    }
+
 
     updateDoctor(data:any){
         console.log(data);

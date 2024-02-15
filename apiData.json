@@ -187,7 +187,7 @@
       "appointmentDescription": "asdfasdsdfsdfsdf",
       "doctorId": 2,
       "appointmentStatus": "Pending",
-      "patientId": 0,
+      "patientId": 2,
       "id": 8
 
     }

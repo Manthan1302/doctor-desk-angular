@@ -58,6 +58,8 @@ export class DoctorLoginService {
       if (this.userMatch) {
         console.log(this.userMatch);
         sessionStorage.setItem('LogedDoctor',JSON.stringify(this.LogedUser))
+        sessionStorage.setItem('AuthKeyDoctor',JSON.stringify("DoctorAuthKey"))
+
         this.router.navigate(['doctordashbord'])
       } else {
         console.log(this.userMatch);

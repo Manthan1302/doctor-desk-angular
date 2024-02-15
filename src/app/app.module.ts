@@ -29,6 +29,7 @@ import { CommonModule } from '@angular/common';
 
 import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
 import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
+import { Error404Component } from './error404/error404.component';
 
 
 
@@ -55,6 +56,7 @@ import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
     DoctorPatientsComponent,
     PriscriptionformComponent,
     MydoctorsComponent,
+    Error404Component,
 
 
   ],
