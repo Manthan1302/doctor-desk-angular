@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DoctorLoginService } from '../DoctorServices/DoctorLogin.service';
 
 @Component({
   selector: 'app-dashbord',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class DashbordComponent {
 
+  constructor(private service:DoctorLoginService){}
+  
+  logOut(){
+    this.service.LogOutDoctor();
+  }
 }

@@ -54,4 +54,10 @@ export class MyAppointmentComponent {
 
     }
   }
+
+  deleteAppointment(id:number | null){
+    this.service.deleteAppointment(id!).subscribe();
+    this.ngOnInit()
+  }
+
 }

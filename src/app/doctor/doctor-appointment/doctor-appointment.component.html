@@ -10,7 +10,7 @@
     </select>
   </div>
   <div class="col-md-6">
-    <button (click)="StatusFilter()" class="btn btn-primary">Apply</button>
+    <button (click)="StatusFilter()" class="btn btn-outline-primary">Apply</button>
   </div>
 
   <table class="table table-hover">
@@ -20,7 +20,7 @@
         <th scope="col">Appointment Date</th>
         <th scope="col">Appointment Status</th>
         <th scope="col">Appointment Time</th>
-        <th scope="col" colspan="2">Action</th>
+        <th scope="col" colspan="3">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -52,14 +52,14 @@
             (click)="openmodalfunction(data)"
           ></i>
         </td>
-        <td><i class="bi bi-trash3-fill text-danger"></i></td>
+        <td><i class="bi bi-trash3-fill text-danger" (click)="deleteAppointment(data.id)"></i></td>
         <td
-          *ngIf="data.appointmentStatus === 'Approve'"
+          
+        >
+          <i class="bi bi-journal-check text-success" *ngIf="data.appointmentStatus === 'Approve'"
           data-bs-toggle="modal"
           data-bs-target="#priscriptionmodel"
-          (click)="openpriscriptionmodal(data)"
-        >
-          <i class="bi bi-journal-check text-success"></i>
+          (click)="openpriscriptionmodal(data)"></i>
         </td>
       </tr>
     </tbody>
@@ -181,7 +181,7 @@
           </section>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+          <button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal">
             Save changes
           </button>
         </div>
@@ -215,7 +215,7 @@
         ></app-priscriptionform>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
           Close
         </button>
       </div>
