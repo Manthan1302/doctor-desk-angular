@@ -7,10 +7,12 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link text-danger" (click)="logout()"><i class="bi bi-star"> Log out</i></a>
+
+            <a class="nav-link text-danger"  style="cursor: pointer;"><i class="bibi bi-box-arrow-left" (click)="logout()"> Log out</i></a>
+
           </li>
           <li class="nav-item">
-            <a class="nav-link text-warning" routerLink="profile"><i class="bi bi-person "></i> Profile</a>
+            <a class="nav-link text-light" routerLink="profile"><i class="bi bi-person"></i> Profile</a>
           </li>
         </ul>
       </div>
@@ -20,9 +22,9 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <ul>
-      <li><a routerLink="appointment"><i class="bi bi-star"></i>Appointment</a></li>
-      <li><a routerLink="doctorPatients" ><i class="bi bi-star"></i>All Patient</a></li>
-      <li><a routerLink="home"><i class="bi bi-star"></i> Settings</a></li>
+      <li><a routerLink="appointment" class="nav-link text-light"><i class="bi bi-journal-plus"></i> Appointment</a></li>
+      <li><a routerLink="doctorPatients" class="nav-link text-light" ><i class="bi bi-person-plus-fill"></i> All Patient</a></li>
+      <li><a  class="nav-link text-light" style="cursor: pointer;"><i class="bi bi-box-arrow-right" (click)="logout()"></i> LogOut</a></li>
     </ul>
   </div>
 

@@ -54,4 +54,10 @@ export class CommonServiceService {
     return this.httpClient.get<Appointments[]>(path)
   }
 
+  deleteAppointment(id:number){
+    const path=`${this.url}/allAppointments/${id}`
+    console.log(id);
+    return this.httpClient.delete(path)
+  }
+
 }

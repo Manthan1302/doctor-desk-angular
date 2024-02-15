@@ -55,16 +55,16 @@
   ],
   "allPatient": [
     {
-      "PatientName": "jigar",
+      "PatientName": "jigar patel",
       "PatientEmail": "jigar@gmail.com",
       "PatientPhoneNumber": 7201914901,
       "PatientDateOfBirth": "2000-01-20",
-      "PatientGender": "Male",
       "PatientAddress": "parasnagar",
       "PatientCity": "ahmedabad",
       "PatientState": "gujrat",
       "PatientPinCode": "382418",
       "PatientPassword": "000000",
+      "PatientGender": "Male",
       "id": 0
     },
     {
@@ -117,20 +117,11 @@
       "id": 1
     },
     {
-      "appointmentDate": "2024-02-04",
-      "appointmentTime": "00:44",
-      "appointmentDescription": "sdfsdfsfsfsdf",
-      "appointmentStatus": "Complete",
-      "doctorId": 2,
-      "patientId": 0,
-      "id": 2
-    },
-    
-    {
+
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Manthan",
-      "appointmentStatus": "Approve",
+      "appointmentStatus": "Complete",
       "doctorId": 2,
       "patientId": 2,
       "id": 3
@@ -153,12 +144,13 @@
       "doctorId": 2,
       "patientId": 0,
       "id": 4
+
     },
     {
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Arjun",
-      "appointmentStatus": "Complete",
+      "appointmentStatus": "Pending",
       "doctorId": 3,
       "patientId": 0,
       "id": 5
@@ -189,6 +181,217 @@
       "appointmentStatus": "Pending",
       "patientId": 2,
       "id": 8
+
+    },
+    {
+      "appointmentDate": "2024-02-17",
+      "appointmentTime": "16:48",
+      "appointmentDescription": "i have some sikkk",
+      "doctorId": 4,
+      "patientId": 0,
+      "appointmentStatus": "Complete",
+      "id": 9
+    }
+  ],
+  "allpriscriptiondata": [
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "Mayur",
+      "patientGender": "Male",
+      "patientPhone": 9510287327,
+      "patientDob": "2002-03-09",
+      "patientAge": 21,
+      "Medicine": [
+        {
+          "medicineName": "parasitamol",
+          "medicineDosetime": "Noon",
+          "medicineQuntity": 2,
+          "medicineInstruction": "get"
+        },
+        {
+          "medicineName": "capsule",
+          "medicineDosetime": "Night",
+          "medicineQuntity": 2,
+          "medicineInstruction": "df"
+        }
+      ],
+      "doctorId": 2,
+      "patientId": 2,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 1
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "Mayur",
+      "patientGender": "Male",
+      "patientPhone": 9510287327,
+      "patientDob": "2002-03-09",
+      "patientAge": 21,
+      "Medicine": [
+        {
+          "medicineName": "parasitamol",
+          "medicineDosetime": "Noon",
+          "medicineQuntity": 2,
+          "medicineInstruction": "get"
+        },
+        {
+          "medicineName": "capsule",
+          "medicineDosetime": "Night",
+          "medicineQuntity": 2,
+          "medicineInstruction": "df"
+        }
+      ],
+      "doctorId": 2,
+      "patientId": 2,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 1
+    },
+    {
+      "doctorName": "mayur",
+      "clinicName": "zydus",
+      "clinicAddress": "arbudanagar",
+      "patientName": "jigar",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [
+        {
+          "medicineName": "ipill",
+          "medicineDosetime": "Morning",
+          "medicineQuntity": 2,
+          "medicineInstruction": "lkdjfslk"
+        },
+        {
+          "medicineName": "parasitamol",
+          "medicineDosetime": "Morning",
+          "medicineQuntity": 25,
+          "medicineInstruction": "lai le loda"
+        }
+      ],
+      "doctorId": 4,
+      "patientId": 0,
+      "appointmentdate": "2024-02-17",
+      "appointmenttime": "16:48",
+      "id": 2
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "jigar",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": 0,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 3
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "jigar",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": 0,
+      "appointmentdate": "2024-02-23",
+      "appointmenttime": "16:07",
+      "id": 4
+    },
+    {
+      "doctorName": null,
+      "clinicName": null,
+      "clinicAddress": null,
+      "patientName": null,
+      "patientGender": null,
+      "patientPhone": null,
+      "patientDob": null,
+      "patientAge": null,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": 0,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 5
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "jigar",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": 0,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 6
+    },
+    {
+      "doctorName": null,
+      "clinicName": null,
+      "clinicAddress": null,
+      "patientName": null,
+      "patientGender": null,
+      "patientPhone": null,
+      "patientDob": null,
+      "patientAge": null,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": 1,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:48",
+      "id": 7
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "jigar",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": null,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 8
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "keyur",
+      "patientGender": "Male",
+      "patientPhone": 9510287327,
+      "patientDob": "2002-03-09",
+      "patientAge": 21,
+      "Medicine": [],
+      "doctorId": 2,
+      "patientId": null,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:48",
+      "id": 9
 
     }
   ]

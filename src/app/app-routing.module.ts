@@ -25,6 +25,8 @@ import { RegLogAuthGuard  } from './doctor/AuthGuard/reg-log-auth.guard';
 import { LogRegAuthGuard  } from './patient/AuthGuard/log-reg-auth.guard';
 import { PatientAccessAuthGuard } from './patient/AuthGuard/patient-access-auth.guard';
 import { Error404Component } from './error404/error404.component';
+import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
+import { PatientPriscriptionComponent } from './patient/patient-priscription/patient-priscription.component';
 
 
 
@@ -50,6 +52,8 @@ const routes: Routes = [
     {path:"AllDoctors",component:AllDoctorsComponent},
     {path:"myAppointment",component:MyAppointmentComponent},
     {path:"myDoctors",component:MydoctorsComponent},
+    {path:"priscription",component:PatientPriscriptionComponent},
+
 
   ]},
   {path:"**",component:Error404Component}

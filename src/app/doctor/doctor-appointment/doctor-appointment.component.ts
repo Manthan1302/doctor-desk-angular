@@ -112,4 +112,16 @@ export class DoctorAppointmentComponent {
   {
     this.appointmentData = data;
   }
+
+
+
+   ngOnInitcall(){
+    this.ngOnInit();
+   }
+
+  deleteAppointment(id:number | null){
+    this.manageAppointmentService.deleteAppointmentDoctor(id).subscribe();
+    this.ngOnInit();
+
+  }
 }

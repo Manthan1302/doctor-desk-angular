@@ -18,7 +18,7 @@
            
             <td><i class="bi bi-eye" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 (click)="openModelPatientDetails(patient)"> </i></td>
-            <td><i class="bi bi-trash3-fill text-danger"></i></td>
+            <td><i class="bi bi-trash3-fill text-danger" (click)="deletePatient(patient.id)"></i></td>
         </tr>
     </tbody>
 </table>
@@ -31,7 +31,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <section style="background-color: #eee;">
+                <section>
                     <div class="container py-5">
                         <div class="row">
                             <div class="col-lg-8">
