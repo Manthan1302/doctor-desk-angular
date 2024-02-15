@@ -9,7 +9,7 @@
         </select>
     </div>
     <div class="col-md-6">
-        <button (click)="StatusFilter()" class="btn btn-primary">Apply</button>
+        <button (click)="StatusFilter()" class="btn btn-outline-primary">Apply</button>
     </div>
 
     <table class="table table-hover">
@@ -30,7 +30,7 @@
                 <td>{{item.appointmentStatus}}</td>
                 <td>{{item.appointmentTime}}</td>
                 <td><i class="bi bi-eye"></i></td>
-                <td><i class="bi bi-trash3-fill text-danger"></i></td>
+                <td><i class="bi bi-trash3-fill text-danger" (click)="deleteAppointment(item.id)"></i></td>
             </tr>
         </tbody>
     </table>

@@ -68,4 +68,9 @@ export class DoctorLoginService {
     // console.log(this.userMatch);
     
   }
+
+  LogOutDoctor(){
+    sessionStorage.removeItem('loggedPatient');
+    this.router.navigate(['/doctorlogin']);
+  }
 }

@@ -55,16 +55,16 @@
   ],
   "allPatient": [
     {
-      "PatientName": "jigar",
+      "PatientName": "jigar patel",
       "PatientEmail": "jigar@gmail.com",
       "PatientPhoneNumber": 7201914901,
       "PatientDateOfBirth": "2000-01-20",
-      "PatientGender": "Male",
       "PatientAddress": "parasnagar",
       "PatientCity": "ahmedabad",
       "PatientState": "gujrat",
       "PatientPinCode": "382418",
       "PatientPassword": "000000",
+      "PatientGender": "Male",
       "id": 0
     },
     {
@@ -119,16 +119,6 @@
     {
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
-      "appointmentDescription": "sdfsdfsfsfsdf",
-      "appointmentStatus": "Complete",
-      "doctorId": 2,
-      "patientId": 0,
-      "id": 2
-    },
-    
-    {
-      "appointmentDate": "2024-02-04",
-      "appointmentTime": "00:44",
       "appointmentDescription": "Manthan",
       "appointmentStatus": "Approve",
       "doctorId": 2,
@@ -143,16 +133,6 @@
       "doctorId": 2,
       "patientId": 2,
       "id": 3
-
-    },
-    {
-      "appointmentDate": "2024-02-04",
-      "appointmentTime": "00:44",
-      "appointmentDescription": "Arjun",
-      "appointmentStatus": "Complete",
-      "doctorId": 2,
-      "patientId": 0,
-      "id": 4
     },
     {
       "appointmentDate": "2024-02-04",
@@ -189,7 +169,6 @@
       "appointmentStatus": "Pending",
       "patientId": 0,
       "id": 8
-
     }
   ]
 }

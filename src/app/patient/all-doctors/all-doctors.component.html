@@ -1,5 +1,5 @@
 
-<body style="background-color: #eee;">
+<body >
     <div class="container mt-5 mb-5" >
         <div class="row g-2">
             <div class="col-md-3" *ngFor="let item of doctors">
@@ -10,10 +10,10 @@
                     <h5 class="mb-0">{{item.doctorName}} {{item.id}}</h5>
                     <small>{{item.doctorSpecialization}}</small>
                     <div class="mt-4 apointment">
-                      <button class="btn btn-info text-uppercase" (click)="openmodal(item)" data-bs-toggle="modal"
+                      <button class="btn btn-outline-info text-uppercase" (click)="openmodal(item)" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop"><i class="bi bi-eye text-info"  ></i></button>
                         
-            <button class="btn btn-success text-uppercase" data-bs-toggle="modal" data-bs-target="#bookappointmentmodal"
+            <button class="btn btn-outline-success text-uppercase" data-bs-toggle="modal" data-bs-target="#bookappointmentmodal"
             (click)="bookappointment(item)">Book Appointment</button>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <section style="background-color: #eee;">
+          <section >
             <div class="container py-5">
               <div class="row">
                 <div class="col-lg-4">
@@ -106,7 +106,7 @@
           </section>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
 
         </div>
       </div>
@@ -147,13 +147,13 @@
                       <label for="description" class="form-label">Description</label>
                       <textarea class="form-control" id="description" ngModel name="appointmentDescription" rows="3" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
                   </form>
                 </div>
               </div>
             </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

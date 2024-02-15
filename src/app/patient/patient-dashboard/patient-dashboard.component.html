@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-danger"  (click)="logout()"><i class="bi bi-star"> Log out</i></a>
+                    <a class="nav-link text-danger" style="cursor:pointer;" (click)="logout()"><i class="bi bi-box-arrow-left"> Log out</i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-warning" routerLink="PatientProfile" ><i class="bi bi-person "></i> Profile</a>
+                    <a class="nav-link text-light" routerLink="PatientProfile"><i class="bi bi-person "></i> Profile</a>
                 </li>
             </ul>
         </div>
@@ -21,10 +21,10 @@
 <!-- Sidebar -->
 <div class="sidebar">
     <ul>
-        <li><a routerLink="AllDoctors"><i class="bi bi-star"></i>All Doctors</a></li>
-        <li><a routerLink="myAppointment"><i class="bi bi-star"></i> My Appointment</a></li>
-        <li><a routerLink="myDoctors"><i class="bi bi-star"></i> My Doctors</a></li>
-        <li><a routerLink="AllDoctors"><i class="bi bi-star"></i> Logout</a></li>
+        <li><a class="nav-link text-light" routerLink="AllDoctors"><i class="bi bi-people-fill"></i> All Doctors</a></li>
+        <li><a class="nav-link text-light" routerLink="myAppointment"><i class="bi bi-journal-plus"></i> My Appointment</a></li>
+        <li><a class="nav-link text-light" routerLink="myDoctors"><i class="bi bi-person-plus-fill"></i> My Doctors</a></li>
+        <li><a class="nav-link text-light" style="cursor:pointer;"  (click)="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
     </ul>
 </div>
 
