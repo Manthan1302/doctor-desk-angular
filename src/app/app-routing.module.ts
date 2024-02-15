@@ -20,6 +20,8 @@ import { DoctorAppointmentComponent } from './doctor/doctor-appointment/doctor-a
 import { MyAppointmentComponent } from './patient/my-appointment/my-appointment.component';
 import { DoctorPatientsComponent } from './doctor/doctor-patients/doctor-patients.component';
 import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
+import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
+import { PatientPriscriptionComponent } from './patient/patient-priscription/patient-priscription.component';
 
 
 
@@ -45,6 +47,8 @@ const routes: Routes = [
     {path:"AllDoctors",component:AllDoctorsComponent},
     {path:"myAppointment",component:MyAppointmentComponent},
     {path:"myDoctors",component:MydoctorsComponent},
+    {path:"priscription",component:PatientPriscriptionComponent},
+
 
   ]},
 

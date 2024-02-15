@@ -5,7 +5,13 @@ import { DoctorRegistration } from '../../doctorModel/DoctorRegistrationModel';
 import { PatientComponent } from './../../../patient/patient.component';
 import { PatientRegistration } from 'src/app/patient/PatientModel/PatientRegistartionModel';
 import { PatientLoginService } from './../../../patient/PatientService/patient-login.service';
-import { Priscriptionmodel } from '../../doctorModel/Priscriptiondatamodel';
+import { Medicine, Priscriptionmodel } from '../../doctorModel/Priscriptiondatamodel';
+import { Priscriptionservice } from './../../../sharedServices/priscription.service';
+import { GetAppointments } from 'src/app/sharedServices/getAppointments.service';
+import { ManageAppointmentService } from 'src/app/sharedServices/manageAppointment.service';
+import { Router } from '@angular/router';
+import { DoctorAppointmentComponent } from '../doctor-appointment.component';
+
 
 @Component({
   selector: 'app-priscriptionform',
@@ -18,9 +24,16 @@ export class PriscriptionformComponent implements OnInit {
   DoctorData!:DoctorRegistration
   PatientData!:PatientRegistration
   priscriptionsubmitformdata!:Priscriptionmodel
+  paitentid:number |  null = null
+  doctorid:number | null = null
+
   @Input()appointmentData!: Appointments;
 
-  constructor(private PatientLoginService:PatientLoginService){}
+  constructor(private PatientLoginService:PatientLoginService,private Priscriptionservice:Priscriptionservice,private appointmentServices: GetAppointments,
+    private manageAppointmentService: ManageAppointmentService,
+    private router:Router,private doctorapp:DoctorAppointmentComponent
+    
+    ){}
 
 
 
@@ -56,10 +69,10 @@ export class PriscriptionformComponent implements OnInit {
   ngOnChanges(): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
-    let paitentid = this.appointmentData.patientId
+    // this.paitentid = this.appointmentData.patientId
     this.PatientLoginService.getallpatient().subscribe(result => {
       result.filter(e => {
-        if(e.id === paitentid)
+        if(e.id === this.appointmentData.patientId!)
         {
           this.PatientData = e
           console.log(this.PatientData);
@@ -108,12 +121,28 @@ export class PriscriptionformComponent implements OnInit {
 
   priscriptionsubmit(){
     this.priscriptionsubmitformdata = this.priscriptionform.value
-    console.log( this.priscriptionform.value);
-    
-    console.log(this.priscriptionsubmitformdata);
+    this.Priscriptionservice.createPriscription(this.priscriptionsubmitformdata,this.paitentid!,this.DoctorData.id!,this.appointmentData.appointmentDate!,this.appointmentData.appointmentTime!).subscribe(res=>{
+      console.log(res);
+      
+    })
+    this.priscriptionform.get('Medicine')?.reset();
+    const deletemedicinecomponent = <FormArray>this.priscriptionform.get('Medicine');
+    this.actionAppointment();
     
   }
+  
+  actionAppointment() {
+    let status = 'Complete'
+    // console.log(status);
+    // console.log(this.appointmentId);
+    this.manageAppointmentService.actionAppointments(this.appointmentData.id, status).subscribe(res => {
+      console.log(res);
 
+      // this.ngOnInit();
+      this.doctorapp.ngOnInitcall();
+    })
+    // this.router.navigate(['doctordashbord/appointment'])
+  }
 
 
 

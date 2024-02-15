@@ -112,4 +112,10 @@ export class DoctorAppointmentComponent {
   {
     this.appointmentData = data;
   }
+
+
+   ngOnInitcall(){
+    this.ngOnInit();
+    
+  }
 }

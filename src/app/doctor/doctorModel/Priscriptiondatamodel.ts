@@ -1,11 +1,15 @@
 export class Priscriptionmodel{
-    
+    id:number|null=null
+    doctorId:number | null = null
+    patientId:number | null = null
     doctorName : string | null = null
     clinicName : string | null = null
     clinicAddress : string | null = null
     patientName : string | null = null
     patientGender : string | null = null
     patientPhone : number | null = null
+    appointmentdate : string | null = null
+    appointmenttime : string | null = null
     patientDob : Date | null = null
     patientAge : number | null = null
     Medicine: Medicine[]=[]

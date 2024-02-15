@@ -29,6 +29,8 @@ import { CommonModule } from '@angular/common';
 
 import { PriscriptionformComponent } from './doctor/doctor-appointment/priscriptionform/priscriptionform.component';
 import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
+import { PatientPriscriptionComponent } from './patient/patient-priscription/patient-priscription.component';
+import { DownloadpriComponent } from './patient/patient-priscription/downloadpri/downloadpri.component';
 
 
 
@@ -53,8 +55,10 @@ import { MydoctorsComponent } from './patient/mydoctors/mydoctors.component';
     PatientProfileComponent,
     MyAppointmentComponent,
     DoctorPatientsComponent,
-    PriscriptionformComponent,
     MydoctorsComponent,
+    PriscriptionformComponent,
+    PatientPriscriptionComponent,
+    DownloadpriComponent
 
 
   ],

@@ -4,6 +4,7 @@ import { PatientRegistration } from "../patient/PatientModel/PatientRegistartion
 import { Appointments } from "../sharedModel/Appointment";
 import { map } from "rxjs";
 
+
 @Injectable({
     providedIn:'root'
 })
@@ -14,6 +15,7 @@ export class ManageAppointmentService{
 
     appointmentsApi:string='http://localhost:3000/allAppointments'
     patientApi:string='http://localhost:3000/allPatient'
+
 
 
 
@@ -31,6 +33,6 @@ export class ManageAppointmentService{
 
     getAppointmentDoctor(){
        return  this.http.get<Appointments[]>(this.appointmentsApi)
-
     }
+    
 }

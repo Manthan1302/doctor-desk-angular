@@ -1,0 +1,37 @@
+<div class="prescription" id="downloadpriscription">
+    <div class="section-heading">Doctor's Prescription</div>
+    
+    <div class="patient-info">
+        <p><strong>Patient Name:</strong>{{item?.doctorName}}</p>
+        <p><strong>Patient Gender:</strong> {{item?.patientGender}}</p>
+        <p><strong>Patient Phone:</strong> {{item?.patientPhone}}</p>
+        <p><strong>Patient Date of Birth:</strong>{{item?.patientAge}}</p>
+        <p><strong>Patient Age:</strong>{{item?.patientAge}}</p>
+    </div>
+
+    <div class="medicine-info">
+        <div class="section-heading">Medicines:</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Dosage Time</th>
+                    <th>Quantity</th>
+                    <th>Instructions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of item?.Medicine">
+                    <td>{{item?.medicineName}}</td>
+                    <td>{{item?.medicineDosetime}}</td>
+                    <td>{{item?.medicineQuntity}}</td>
+                    <td>{{item?.medicineInstruction}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section-heading">Appointment Details:</div>
+    <p><strong>Date:</strong> {{item?.appointmentdate}}</p>
+    <p><strong>Time:</strong>{{item?.appointmenttime}}</p>
+</div>
+<button class="btn btn-success" (click)="downloadpriscriptionfunction()">Download</button>
