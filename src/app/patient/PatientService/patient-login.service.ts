@@ -50,6 +50,7 @@ export class PatientLoginService {
 
   logoutPatient(){
     sessionStorage.removeItem('loggedPatient');
+    sessionStorage.removeItem('AuthKeyPatient');
     this.router.navigate(['/patientLogin'])
   }
 

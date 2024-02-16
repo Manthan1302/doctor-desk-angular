@@ -51,6 +51,19 @@
       "doctorSpecialization": "Dermatologist",
       "doctorRegistrationNumber": 963258745120,
       "id": 4
+    },
+    {
+      "doctorName": "manthan",
+      "doctorEmail": "Manthan@gmail.com",
+      "doctorPhoneNumber": 6352896341,
+      "doctorGender": "Male",
+      "doctorClinicName": "abc",
+      "doctorSpecialization": "Cardiologist",
+      "doctorClinicAddress": "isanpur",
+      "doctorRegistrationNumber": 1.1111111111111111e+23,
+      "doctorRegisterPassword": "1111",
+      "doctorRegisterConfirmPassword": "1111",
+      "id": 5
     }
   ],
   "allPatient": [
