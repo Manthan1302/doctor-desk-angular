@@ -11,7 +11,7 @@ export class DoctorProfileComponent implements OnInit{
   constructor(private doctorComonService:DoctorComonService){}
   doctordata!:DoctorRegistration
 
-  
+  showEditForm:boolean = false
 
   updateName:string|null=null
   updateEmail:string|null=null
@@ -40,6 +40,7 @@ ngOnInit(): void {
 }
 
 updateData(formVal:any){
+  // this.showEditForm = !this.showEditForm
   console.log(formVal);
   
   this.doctorComonService.updateDoctor(formVal).subscribe(result=>{

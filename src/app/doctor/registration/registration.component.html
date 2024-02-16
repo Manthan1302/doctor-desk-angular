@@ -1,58 +1,141 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center mb-4">Doctor Registration Form</h3>
-                    <form #doctorRegistrationForm="ngForm" (ngSubmit)="registerDoctor(doctorRegistrationForm.value)">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Doctor Name" ngModel name="doctorName"/>
+<section class="h-100 ">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                            <img src="../../../assets/images/patientRegistration.jpg" alt="Sample photo"
+                                class="img-fluid" style="
+                    border-top-left-radius: 0.25rem;
+                    border-bottom-left-radius: 0.25rem;" />
                         </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Phone Number" ngModel name="doctorPhoneNumber"/>
+
+                        <div class="col-xl-6">
+                            <form #doctorRegistrationForm="ngForm"
+                                (ngSubmit)="registerDoctor(doctorRegistrationForm.value)">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Doctor registration Form</h3>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg"
+                                                    name="doctorName" ngModel />
+                                                <label class="form-label">Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg"
+                                                    name="doctorEmail" ngModel />
+                                                <label class="form-label">Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="number" class="form-control form-control-lg"
+                                                    name="doctorPhoneNumber" ngModel />
+                                                <label class="form-label" for="form3Example1m1">Phone Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                                <h6 class="mb-0 me-4">Gender:</h6>
+
+                                                <div class="form-check form-check-inline mb-0 me-4">
+                                                    <input class="form-check-input" type="radio" name="doctorGender"
+                                                        value="Male" ngModel />
+                                                    <label class="form-check-label">Male</label>
+                                                </div>
+                                                <div class="form-check form-check-inline mb-0 me-4">
+                                                    <input class="form-check-input" type="radio" name="doctorGender"
+                                                        value="Female" ngModel />
+                                                    <label class="form-check-label">Female</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg"
+                                                    name="doctorClinicName" ngModel />
+                                                <label class="form-label" for="form3Example1m1">Clinic Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <select class="form-control form-control-lg" ngModel
+                                                    name="doctorSpecialization">
+                                                    <option>Specialization</option>
+                                                    <option>Cardiologist</option>
+                                                    <option>Dermatologist</option>
+                                                    <option>Endocrinologist</option>
+                                                    <!-- Add more options as needed -->
+                                                </select>
+                                                <label class="form-label" for="form3Example1n1">Specialization</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" class="form-control form-control-lg"
+                                            name="doctorClinicAddress" ngModel />
+                                        <label class="form-label" for="form3Example8">Clinic Address</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="number" class="form-control form-control-lg"
+                                            name="doctorRegistrationNumber" ngModel />
+                                        <label class="form-label">Registration Number</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline mb-4">
+                                                <input type="password" class="form-control form-control-lg"
+                                                    name="doctorRegisterPassword" ngModel />
+                                                <label class="form-label">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline mb-4">
+                                                <input type="password" class="form-control form-control-lg"
+                                                    name="doctorRegisterConfirmPassword" ngModel />
+                                                <label class="form-label">Confirm Password</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <p>
+                                        You have an already account?
+                                        <a routerLink="/doctorlogin" class="link text-dark"
+                                            style="text-decoration: none;">Login</a>
+                                    </p>
+                                    <div class="d-flex justify-content-end pt-3">
+                                        <!-- <button type="button" class="btn btn-outline-dark" (click)="resetForm(patientRegistration)">
+                        Reset all
+                      </button> -->
+                                        <button type="submit" class="btn btn-lg ms-2 btn-outline-primary">
+                                            Submit form
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <select class="form-control" ngModel name="doctorGender">Gender
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group" >
-                            <input type="email" class="form-control" placeholder="Email" ngModel name="doctorEmail"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" ngModel name="doctorRegisterPassword"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Confirm Password" ngModel name="doctorRegisterConfirmPassword"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Clinic Name" ngModel name="doctorClinicName"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Clinic Address" ngModel name="doctorClinicAddress"/>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" ngModel name="doctorSpecialization">
-                                <option selected >Specialization</option>
-                                <option>Cardiologist</option>
-                                <option>Dermatologist</option>
-                                <option>Endocrinologist</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Doctor Registration Number" ngModel name="doctorRegistrationNumber"/>
-                        </div>
-                        <p><a routerLink="/doctorlogin">Login page</a></p>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-outline-primary btn-block">Register</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+</section>
