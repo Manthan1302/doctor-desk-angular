@@ -117,7 +117,6 @@
       "id": 1
     },
     {
-
       "appointmentDate": "2024-02-04",
       "appointmentTime": "00:44",
       "appointmentDescription": "Manthan",
@@ -134,7 +133,6 @@
       "doctorId": 2,
       "patientId": 2,
       "id": 3
-
     },
     {
       "appointmentDate": "2024-02-04",
@@ -144,7 +142,6 @@
       "doctorId": 2,
       "patientId": 0,
       "id": 4
-
     },
     {
       "appointmentDate": "2024-02-04",
@@ -178,10 +175,9 @@
       "appointmentTime": "16:07",
       "appointmentDescription": "asdfasdsdfsdfsdf",
       "doctorId": 2,
-      "appointmentStatus": "Pending",
+      "appointmentStatus": "Approve",
       "patientId": 2,
       "id": 8
-
     },
     {
       "appointmentDate": "2024-02-17",
@@ -392,7 +388,6 @@
       "appointmentdate": "2024-02-04",
       "appointmenttime": "00:48",
       "id": 9
-
     }
   ]
 }
