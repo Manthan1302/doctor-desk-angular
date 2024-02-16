@@ -23,3 +23,8 @@ export class Medicine{
     medicineQuntity : number | null = null
     medicineInstruction : string | null = null
 } 
+
+export class MedicineApi{
+    id:number|null=null
+    MedicineName:string|null=null
+}

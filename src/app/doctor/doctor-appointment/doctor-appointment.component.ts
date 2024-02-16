@@ -86,7 +86,7 @@ export class DoctorAppointmentComponent {
       this.appointmentServices.getMyAppointments().subscribe(result => {
         this.appointments = result.filter(e => {
           
-          if (this.status?.nativeElement.value === "All" && e.appointmentStatus!="Complete") {
+          if (this.status?.nativeElement.value === "All" ) {
             return e.doctorId === doctorId
           }
           else {

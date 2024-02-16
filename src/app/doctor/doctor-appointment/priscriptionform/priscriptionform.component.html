@@ -40,7 +40,19 @@
           <div class="input-box" *ngFor="let item of medicinecontrol() let i = index" [formGroupName]="i">
             <div class="medicines" style="border: 1px solid black; padding: 30px; border-radius: 10px;">
               <label>Medicines {{i+1}}</label>
-              <input type="text" placeholder="Medicine Name"  formControlName="medicineName"/>
+
+              <input type="text" list="medi" placeholder="Medicine Name"   
+              (ngModelChange)="valuechange()"
+
+              formControlName="medicineName"/>
+              <datalist id="medi" >
+                <option [value]="data.MedicineName" *ngFor="let data of medicines"></option>
+              
+              </datalist>
+
+              <!-- <div *ngFor="let data of medicines">
+            {{data.MedicineName }}</div> -->
+
               <div class="column">
                 <div class="select-box">
                   <select  formControlName="medicineDosetime">

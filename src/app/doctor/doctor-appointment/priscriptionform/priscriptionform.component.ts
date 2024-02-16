@@ -1,16 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Appointments } from 'src/app/sharedModel/Appointment';
 import { DoctorRegistration } from '../../doctorModel/DoctorRegistrationModel';
 import { PatientComponent } from './../../../patient/patient.component';
 import { PatientRegistration } from 'src/app/patient/PatientModel/PatientRegistartionModel';
 import { PatientLoginService } from './../../../patient/PatientService/patient-login.service';
-import { Medicine, Priscriptionmodel } from '../../doctorModel/Priscriptiondatamodel';
+import { Medicine, MedicineApi, Priscriptionmodel } from '../../doctorModel/Priscriptiondatamodel';
 import { Priscriptionservice } from './../../../sharedServices/priscription.service';
 import { GetAppointments } from 'src/app/sharedServices/getAppointments.service';
 import { ManageAppointmentService } from 'src/app/sharedServices/manageAppointment.service';
 import { Router } from '@angular/router';
 import { DoctorAppointmentComponent } from '../doctor-appointment.component';
+import { DoctorComonService } from './../../DoctorServices/DoctorComon.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { DoctorAppointmentComponent } from '../doctor-appointment.component';
   templateUrl: './priscriptionform.component.html',
   styleUrls: ['./priscriptionform.component.css']
 })
-export class PriscriptionformComponent implements OnInit {
+export class PriscriptionformComponent implements OnInit,OnDestroy {
 
   priscriptionform!:FormGroup
   DoctorData!:DoctorRegistration
@@ -26,12 +27,17 @@ export class PriscriptionformComponent implements OnInit {
   priscriptionsubmitformdata!:Priscriptionmodel
   paitentid:number |  null = null
   doctorid:number | null = null
+  medicines:MedicineApi[]=[
+    // {id:1,MedicineName:'an'},
+    // {id:2,MedicineName:'abc'}
+  ]
 
   @Input()appointmentData!: Appointments;
 
   constructor(private PatientLoginService:PatientLoginService,private Priscriptionservice:Priscriptionservice,private appointmentServices: GetAppointments,
     private manageAppointmentService: ManageAppointmentService,
-    private router:Router,private doctorapp:DoctorAppointmentComponent
+    private router:Router,private doctorapp:DoctorAppointmentComponent,
+    private doctorComonService:DoctorComonService
     
     ){}
 
@@ -41,6 +47,7 @@ export class PriscriptionformComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     
+    // this.medicineName.push({medicineName:"dolo"})
     this.priscriptionform = new FormGroup({
       doctorName:new FormControl(null),
       clinicName:new FormControl(null),
@@ -67,6 +74,8 @@ export class PriscriptionformComponent implements OnInit {
   }
 
   ngOnChanges(): void {
+
+    
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
     // this.paitentid = this.appointmentData.patientId
@@ -101,7 +110,74 @@ export class PriscriptionformComponent implements OnInit {
     
   }
 
+  
+  valuechange(){
+    // console.log("Sd");
+    this.doctorComonService.getMedicines().subscribe((e)=>{
+      console.log(e);
+      this.medicines=e;
+      console.log(this.medicines);
+      
+      
+    })
+    
+    // console.log(this.medicineNameInput);
+    //  this.doctorComonService.getMedicines().subscribe((e)=>{
+       
+    //   console.log(e);
+    //   this.medicineName.push({id:e.id,MedicineName:e.MedicineName})
+    //   console.log(e.MedicineName);
+      
+      // this.medicineName.push(e)
+      // console.log(e[0].MedicineName);
+      
+      // this.medicineName.forEach(e=>{
+      //   console.log(e.id);
+        
+        
+      // })
+      // console.log(this.medicineName);
+      
+    // this.medicineName.forEach((m)=>{
+    //   console.log(m.MedicineName);
+      
+    // })  
+      
+    //  });
+    
+    
+    // this.doctorComonService.getMedicines().subscribe(res=>{
+    //   console.log(res);
+    //   this.medicineName=res.filter(e=>{
+    //     console.log(e);
+    //     console.log(e.MedicineName);
+        
+        
+    //     return e.MedicineName===this.medicineNameInput
+    //   })
+      
+    //   // this.medicineName=res
+    // // res.forEach(e=>{
+    // //   console.log(e.MedicineName);
+      
+    // // })      
+        
+    //   })
+      
+  
+      // console.log(this.medicineName);
+      
+      
+      
+    
+    // console.log(this.medicineName)
+    
+
+  }
+
   OnMedicineAddFunction(){
+
+
     const medicineformgroup = new FormGroup({
       medicineName  : new FormControl(null),
       medicineDosetime : new FormControl(null),
@@ -110,6 +186,8 @@ export class PriscriptionformComponent implements OnInit {
     });
     (<FormArray>this.priscriptionform.get('Medicine')).push(medicineformgroup)
   }
+
+
   OnMedicineDeleteFunction(index:number){
     const deletemedicinecomponent = <FormArray>this.priscriptionform.get('Medicine');
     deletemedicinecomponent.removeAt(index)
@@ -125,12 +203,18 @@ export class PriscriptionformComponent implements OnInit {
       console.log(res);
       
     })
-    this.priscriptionform.get('Medicine')?.reset();
+    const abc =  this.priscriptionform.get('Medicine')?.value;
+
+    
     const deletemedicinecomponent = <FormArray>this.priscriptionform.get('Medicine');
     this.actionAppointment();
     
   }
   
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+  }
   actionAppointment() {
     let status = 'Complete'
     // console.log(status);
@@ -143,6 +227,8 @@ export class PriscriptionformComponent implements OnInit {
     })
     // this.router.navigate(['doctordashbord/appointment'])
   }
+
+
 
 
 

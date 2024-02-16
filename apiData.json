@@ -198,7 +198,7 @@
       "appointmentDescription": "i have some sikkk",
       "doctorId": 4,
       "patientId": 0,
-      "appointmentStatus": "Complete",
+      "appointmentStatus": "Pending",
       "id": 9
     }
   ],
@@ -401,6 +401,59 @@
       "appointmentdate": "2024-02-04",
       "appointmenttime": "00:48",
       "id": 9
+    },
+    {
+      "doctorName": "Arjun",
+      "clinicName": "jivanclinic",
+      "clinicAddress": "parasnagar",
+      "patientName": "jigar patel",
+      "patientGender": "Male",
+      "patientPhone": 7201914901,
+      "patientDob": "2000-01-20",
+      "patientAge": 24,
+      "Medicine": [
+        {
+          "medicineName": "654",
+          "medicineDosetime": null,
+          "medicineQuntity": null,
+          "medicineInstruction": "t"
+        }
+      ],
+      "doctorId": 2,
+      "patientId": null,
+      "appointmentdate": "2024-02-04",
+      "appointmenttime": "00:44",
+      "id": 10
+    }
+  ],
+  "medicines": [
+    {
+      "id": 0,
+      "MedicineName": "Dolo"
+    },
+    {
+      "id": 1,
+      "MedicineName": "Dart"
+    },
+    {
+      "id": 2,
+      "MedicineName": "Arjun"
+    },
+    {
+      "id": 3,
+      "MedicineName": "Jeel"
+    },
+    {
+      "id": 4,
+      "MedicineName": "Manthan"
+    },
+    {
+      "id": 5,
+      "MedicineName": "Mayur"
+    },
+    {
+      "id": 6,
+      "MedicineName": "asas"
     }
   ]
 }
